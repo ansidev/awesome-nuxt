@@ -1,0 +1,75 @@
+# Modules
+
+## Official
+
+- [PWA](https://github.com/nuxt-community/pwa-module) - Supercharge Nuxt with a heavily tested, updated and stable PWA solution.
+- [Axios](https://github.com/nuxt-community/axios-module) - Secure and easy Axios integration with Nuxt.js.
+- [Apollo](https://github.com/nuxt-community/apollo-module) - Nuxt.js module to use vue-apollo (integrates graphql-tag loader to parse .gql & .graphql files).
+- [Auth](https://github.com/nuxt-community/auth-module) - Authentication module for Nuxt.js.
+- [Dotenv](https://github.com/nuxt-community/dotenv-module) - Loads your .env file into your application context.
+- [Google-analytics](https://github.com/nuxt-community/analytics-module) - Google Analytics integration for Nuxt.js with vue-analytics.
+- [Sitemap](https://github.com/nuxt-community/sitemap-module) - Automatically generate or serve dynamic `sitemap.xml` for Nuxt.js projects.
+- [Nuxtent](https://github.com/nuxt-community/nuxtent-module) - Seamlessly use content files in your Nuxt.js sites.
+- [Blog](https://github.com/nuxt-community/blog-module) - Create a blog with Nuxt.
+- [Router](https://github.com/nuxt-community/router-module) - Nuxt.js module to use router.js instead of pages/ directory.
+- [OAuth](https://github.com/samtgarson/nuxt-oauth) - Simple OAuth2 integration for your Nuxt app.
+- [Sentry](https://github.com/nuxt-community/sentry-module) - Enables error logging through [Sentry](https://sentry.io).
+- [Webpack Monitor](https://github.com/nuxt-community/webpackmonitor-module) - Monitor nuxt webpack optimization metrics using [webpackmonitor](https://github.com/webpackmonitor/webpackmonitor).
+- [AdSense](https://github.com/nuxt-community/adsense-module) - Google AdSense integration for Nuxt.js.
+- [Vuetify](https://github.com/nuxt-community/modules/tree/master/packages/vuetify) - Material Component Framework.
+- [Browserconfig](https://github.com/nuxt-community/modules/tree/master/packages/browserconfig) - Adds XML browser configuration support.
+- [Bulma](https://github.com/nuxt-community/modules/tree/master/packages/bulma) - Leverage bulma CSS.
+- [Component-cache](https://github.com/nuxt-community/modules/tree/master/packages/component-cache) - The vue-server-renderer has built-in support for component-level caching. This module automatically adds a LRU cache to project.
+- [Font-awesome](https://github.com/nuxt-community/modules/tree/master/packages/font-awesome) - Leverage Font Awesome the iconic font and CSS toolkit.
+- [Font-awesome 5](https://github.com/Qonfucius/nuxt-fontawesome) - Use fontawesome 5 as a nuxtJS module.
+- [Google-tag-manager](https://github.com/nuxt-community/modules/tree/master/packages/google-tag-manager) - Add Google Tag Manager (GTM) to your nuxt.js application. This plugins automatically sends first page and route change events to GTM.
+- [Localtunnel](https://github.com/nuxt-community/modules/tree/master/packages/localtunnel) - Localtunnel exposes your localhost to the world for easy testing and sharing! No need to mess with DNS or deploy just to have others test out your changes.
+- [Markdownit](https://github.com/nuxt-community/modules/tree/master/packages/markdownit) - Using markdownit-loader and markdown-it.
+- [Toast](https://github.com/nuxt-community/modules/tree/master/packages/toast) - Responsive Touch Compatible Toast plugin for Nuxt.js using vue-toasted.
+- [Vendor](https://github.com/nuxt-community/modules/tree/master/packages/vendor) - This awesome little modules creates junction symlinks from nodule_modules into static/vendor so you can directly serve node modules inside web. Useful for runtime dependencies.
+- [Yandex-metrika](https://github.com/nuxt-community/modules/tree/master/packages/yandex-metrika) - Add Yandex Metrika to your nuxt.js application.
+- [Feed](https://github.com/nuxt-community/feed-module) - Add RSS, ATOM and JSON feeds to your application.
+- [Redirect](https://github.com/nuxt-community/redirect-module) - Simplify setting up correct URL redirection with NuxtJS. No more cumbersome redirects!
+- [I18n](https://github.com/nuxt-community/nuxt-i18n) - Add i18n capabilities to your Nuxt project.
+- [Separate Env](https://github.com/nuxt-community/separate-env-module) - Tear apart your variables and split them up for client/server bundle!
+
+## Community
+
+- [Xui](https://github.com/MetaCorp/xui-module) - Light module to help design websites with Nuxt.
+- [WP-API](https://github.com/yashha/wp-nuxt) - Easy WordPress Api [WP-API](https://github.com/WP-API/node-wpapi) integration for you Nuxt app.
+- [BootstrapVue](https://bootstrap-vue.js.org/docs/#nuxt-js) - Bootstrap v4 components and grid system for Nuxt.js.
+- [SocialMeta](https://github.com/AlekseyPleshkov/nuxt-social-meta) - Generate meta-tags for social network - Facebook and Twitter.
+- [Vue Material](https://github.com/vaso2/nuxt-vue-material) - Vue Material framework integration with Nuxt.
+- [Simple Line Icons](https://github.com/vaso2/nuxt-simple-line-icons) - Simple Line Icons for Nuxt.
+- [nuxt-sass-resources-loader](https://github.com/anteriovieira/nuxt-sass-resources-loader) - SASS resources (e.g. variables, mixins etc.) module for NuxtJs.
+- [laravel-nuxt](https://github.com/skyrpex/laravel-nuxt-js) - Build a SPA with Laravel and Nuxt.
+- [cookie-universal-nuxt](https://github.com/microcipcip/cookie-universal/tree/master/packages/cookie-universal-nuxt) - Universal cookie plugin for Nuxt, perfect for SSR.
+- [Buefy](https://github.com/buefy/nuxt-buefy) - Lightweight UI components for Vue.js based on Bulma for Nuxt.
+- [Font Awesome 5](https://github.com/vaso2/nuxt-fontawesome) - Alternative module for Fontawesome 5 integration with ES6 imports and tree shaking.
+- [Matomo](https://github.com/pimlie/nuxt-matomo) - Matomo/Piwik integration for Nuxt.
+- [RealFaviconGenerator Icons](https://github.com/pimlie/nuxt-rfg-icon) - Automatically generate favicons and app icons using RealFaviconGenerator.net's api.
+- [Nuxt Validate](https://github.com/lewyuburi/nuxt-validate) - Simple Nuxt input validation module using vee-validate.
+- [nuxt-bulma-slim](https://github.com/mustardamus/nuxt-bulma-slim) - Module to automatically make a slim Bulma build of used features.
+- [Nuxt7](https://github.com/nuxt-community/nuxt7) - Framework7-Vue Nuxt integration.
+- [Leaflet.js](https://github.com/schlunsen/nuxt-leaflet) - Leaflet.js integration for Nuxt.
+- [Nuxt Express](https://github.com/uptownhr/nuxt-express-module) - Express module for Nuxt (hot reload).
+- [Vue.js Warehouse](https://github.com/bazzite/vue-warehouse) - Cross-browser storage for Vue.js and Nuxt.js, with plugins support and easy extensibility based on Store.js.
+- [nuxt-ts-module](https://github.com/chanlito/nuxt-ts-module) - Tiny module to use TypesScript within Nuxt.js application.
+- [nuxt-typescript](https://github.com/wagerfield/nuxt-typescript) - Lightening fast type checking and linting with TypeScript and TSLint.
+- [nurdism/nuxtjs-electron](https://github.com/nurdism/nuxtjs-electron) - Utility module that helps you work with electron inside nuxt.
+- [nuxt-babel](https://github.com/wemake-services/nuxt-babel) - Use normal `.babelrc` file with your Nuxt app.
+- [nuxt-imagemin](https://github.com/wemake-services/nuxt-imagemin) - Nuxt module to minify your images. Works with: `png`, `jpeg`, `gif`, and `svg`.
+- [nuxt-neo](https://github.com/ezypeeze/nuxt-neo) - Create your middleware api using a universal access point approach from your vue pages.
+- [nuxt-mq](https://github.com/vanhoofmaarten/nuxt-mq) - vue-mq module for Nuxt.js.
+- [kenticocloud-nuxt-module](https://github.com/Domitnator/kenticocloud-nuxt-module) - Add Kentico Cloud super power to your nuxt app.
+- [nuxt-client-init-module](https://github.com/potato4d/nuxt-client-init-module) - Provide client version of nuxtServerInit.
+- [Nuxt Webpack Dashboard](https://github.com/paulgv/nuxt-webpackdashboard) - Webpack Dashboard integration for Nuxt.
+- [Nuxt Vuex Router Sync](https://github.com/paulgv/nuxt-vuex-router-sync) - [vuex-router-sync](https://github.com/vuejs/vuex-router-sync) integration for Nuxt.
+- [nuxt-rollbar-module](https://github.com/zevran/nuxt-rollbar-module) - Rollbar module for NuxtJS.
+- [Nuxt Image Loader Module](https://github.com/reallifedigital/nuxt-image-loader-module) - Nuxt module to automatically resize, rotate, blur, watermark and crop images.
+- [Nuxt-Storage](https://github.com/mazipan/nuxt-storage) - Utilities for easy read and write browser's storage in Nuxt.js project.
+- [nuxt-svg-loader](https://github.com/Developmint/nuxt-svg-loader) - Load your SVGs as you'd load your Vue components.
+- [nuxt-purgecss](https://github.com/Developmint/nuxt-purgecss) - Drop superfluous CSS!
+- [nuxt-bundle-buddy](https://github.com/Developmint/nuxt-bundle-buddy) - Don't fight your webpack bundle, become friends!
+- [prismic-nuxt](https://github.com/jamespegg/prismic-nuxt) - Prismic.io headless CMS integration for Nuxt.
+- [nuxt-fire](https://github.com/lupas/nuxt-fire) - Easily intergrate Firebase into your Nuxt 2 project. 🔥

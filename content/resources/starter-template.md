@@ -1,0 +1,28 @@
+# Starter Template
+
+- [nuxt-community/adonuxt](https://github.com/nuxt-community/adonuxt-template) - Starter template for Nuxt.js with AdonisJS.
+- [nuxt-community/starter](https://github.com/nuxt-community/starter-template) - Nuxt.js starter project template.
+- [nuxt-community/express](https://github.com/nuxt-community/express-template) - Starter template for Nuxt.js with Express.
+- [nuxt-community/koa](https://github.com/nuxt-community/koa-template) - Starter template for Nuxt.js with KoaJS.
+- [nuxt-community/electron](https://github.com/nuxt-community/electron-template) - Electron starter with nuxt.js.
+- [nuxt-community/pwa](https://github.com/nuxt-community/pwa-template) - PWA template for vue-cli based on the starter template.
+- [nuxt-community/typescript](https://github.com/nuxt-community/typescript-template) - Typescript starter with Nuxt.js.
+- [vueniverse](https://github.com/rlindskog/vueniverse) - Vueniverse is a full-stack JavaScript starter project.
+- [liyanlong/nuxt-egg](https://github.com/liyanlong/nuxt-egg) - Nuxt.js + Egg FrameWork.
+- [nuxt-community/micro](https://github.com/nuxt-community/nuxt-micro-template) - Starter Template for Nuxt.js with [Micro](https://github.com/zeit/micro) instead of Express.
+- [nuxt-community/module-template](https://github.com/nuxt-community/module-template) - Starter template for Nuxt.js Modules.
+- [nuxt-community/nuxtent-template](https://github.com/nuxt-community/nuxtent-template) - Starter template for content heavy sites.
+- [cretueusebiu/laravel-nuxt](https://github.com/cretueusebiu/laravel-nuxt) - Nuxt.js + Laravel starter template with examples.
+- [nekdolan/express-hot](https://github.com/nekdolan/express-template-hot) - Starter template based on express-template using hot reload.
+- [vuetifyjs/nuxt](https://github.com/vuetifyjs/nuxt) - Nuxt.js + Vuetify.js starter project template.
+- [ckgrafico/frontend-boilerplates](https://github.com/CKGrafico/Frontend-Boilerplates/tree/nuxt) - Frontend Boilerplate using Nuxtjs + TypeScript + SASS + Some Frontend good practises.
+- [nurdism/electron-nuxt-boilerplate](https://github.com/nurdism/electron-nuxt-boilerplate) - Electron application boilerplate based on nuxt for rapid application development.
+- [wemake-vue-template](https://github.com/wemake-services/wemake-vue-template) - Bleeding edge `vue` + `nuxt` template focused on code quality and developer happiness. Including meaningful docs, `flow`, and `jest`.
+- [galvez/nuxpress](https://github.com/galvez/nuxpress) - Markdown blogging engine and boilerplate written in Nuxt.js.
+- [baisheng/nuxt-thinkjs3](https://github.com/baisheng/nuxt-thinkjs3) - Nuxt.js + Thinkjs FrameWork.
+- [kavalcante/nuxt-element-apollo](https://github.com/kavalcante/nuxt-element-apollo) - Nuxt.js + Element (with custom Theme) + Apollo.
+- [mandaputtra/nuxtbulma-starter](https://github.com/mandaputtra/nuxtbulma-starter) - Nuxt.js + Bulma project scafolding.
+- [woodgates/feathers-nuxt](https://github.com/woodgates/feathers-nuxt) - Implementation of nuxt 1.4.2 with full template feathers 3.2.1 (expressjs, socket.io, hooks, etc).
+- [bitkris-dev/bolide-nuxt-template](https://github.com/bitkris-dev/bolide-nuxt-template) - Question-based template (CSS framework choice + preinstalled modules).
+- [melrefaie/nuxt-cypress](https://github.com/melrefaie/nuxt-cypress) - Nuxt.js + Cypress starter project template.
+- [muhibbudins/nuxt-multiple](https://github.com/muhibbudins/nuxt-multiple) - Nuxt.js starter template for Nuxt Multiple instance with Express Backpack, Element UI, Axios & Example APIs, SASS / SCSS Loader, Vuex Store.

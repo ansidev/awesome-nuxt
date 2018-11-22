@@ -1,0 +1,4 @@
+User-agent: *
+Allow: *
+
+Sitemap: http://awesome-nuxt.js.org/sitemap.xml
