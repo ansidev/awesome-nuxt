@@ -16,7 +16,7 @@ module.exports = {
   base: '/',
   themeConfig: {
     algolia: {
-      apiKey: 'b99936b745ef54d9428c2ba55c88c7a3',
+      apiKey: '933d7aa4b87840bb27049cea95b8a412',
       indexName: 'ansidev_awesome_nuxt'
     },
     repo: 'ansidev/awesome-nuxt',
