@@ -16,9 +16,8 @@ module.exports = {
   base: '/',
   themeConfig: {
     algolia: {
-      apiKey: '933d7aa4b87840bb27049cea95b8a412',
-      appId: 'P91MW5ILVH',
-      indexName: 'ansidev_awesome_nuxt',
+      apiKey: '67346acb58a687206ed3790536caa923',
+      indexName: 'awesome-nuxt',
       algoliaOptions: {
         hitsPerPage: 10,
       },
