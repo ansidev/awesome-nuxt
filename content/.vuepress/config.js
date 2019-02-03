@@ -14,6 +14,7 @@ module.exports = {
   ],
   serviceWorker: true,
   base: '/',
+  ga: 'UA-133732317-1',
   themeConfig: {
     algolia: {
       apiKey: '67346acb58a687206ed3790536caa923',
