@@ -52,6 +52,9 @@ module.exports = {
           '/resources/books',
         ],
       },
+    ],
+    plugins: [
+      '@vuepress/pwa',
     ]
   }
 };

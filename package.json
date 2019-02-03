@@ -31,6 +31,7 @@
       "test": "yarn lint"
     },
     "devDependencies": {
+      "@vuepress/plugin-pwa": "^1.0.0-alpha.0",
       "markdownlint-cli": "^0.13.0",
       "vuepress": "^0.14.8"
     }
