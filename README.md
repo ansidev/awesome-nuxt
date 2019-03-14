@@ -1,7 +1,7 @@
 # Awesome Nuxt.js [![Build Status][badge]][ci]
 
-[badge]: https://travis-ci.com/ansidev/awesome-nuxt.svg?branch=master
-[ci]: https://travis-ci.com/ansidev/awesome-nuxt
+[badge]: https://travis-ci.org/ansidev/awesome-nuxt.svg?branch=master
+[ci]: https://travis-ci.org/ansidev/awesome-nuxt
 
 > A curated list of awesome things related to Nuxt.js
 
