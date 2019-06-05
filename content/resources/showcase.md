@@ -59,3 +59,4 @@
 - [PusatMarket](https://pusatmarket.com/) - PusatMarket is a marketplace that built with Nuxt.js.
 - [61Financial News](https://news.61financial.com.au) - Australia financial news platform for Chinese readers, powered by Nuxt.js with best practices and well-tuned performance.
 - [Popcornee](https://popcornee.herokuapp.com) - A Nuxt app to consume TMDb API. Nuxt + UIKit
+- [Yad2](https://www.yad2.co.il) - The biggest classifieds website in Israel using Nuxt
