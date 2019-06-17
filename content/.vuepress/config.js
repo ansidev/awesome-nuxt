@@ -12,9 +12,7 @@ module.exports = {
     ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#fff' }]
   ],
-  serviceWorker: true,
   base: '/',
-  ga: 'UA-133732317-1',
   themeConfig: {
     algolia: {
       apiKey: '67346acb58a687206ed3790536caa923',
@@ -27,9 +25,6 @@ module.exports = {
     editLinks: true,
     lastUpdated: 'Last Updated',
     nav: [],
-    serviceWorker: {
-      updatePopup: true,
-    },
     sidebar: [
       {
         title: 'Resources',
@@ -55,7 +50,11 @@ module.exports = {
       },
     ],
     plugins: [
-      '@vuepress/pwa',
+      ['@vuepress/pwa', {
+        serviceWorker: true,
+        updatePopup: true
+      }],
+      ['@vuepress/google-analytics', { ga: 'UA-133732317-1' }]
     ]
   }
 };

@@ -1,38 +1,39 @@
 {
-    "name": "awesome-nuxt",
-    "version": "1.0.0",
-    "description": "🎉 A curated list of awesome things related to Nuxt.js",
-    "private": true,
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/ansidev/awesome-nuxt.git"
-    },
-    "author": "Le Minh Tri <ansidev@gmail.com> (https://github.com/ansidev)",
-    "license": "MIT",
-    "bugs": {
-      "url": "https://github.com/ansidev/awesome-vue/issues"
-    },
-    "homepage": "https://awesome-nuxt.js.org",
-    "keywords": [
-      "nuxt",
-      "nuxtjs",
-      "awesome",
-      "awesome-nuxt",
-      "awesome-list",
-      "vuepress"
-    ],
-    "engines": {
-      "node": ">=10"
-    },
-    "scripts": {
-      "dev": "vuepress dev content",
-      "build": "vuepress build content",
-      "lint": "markdownlint . -i node_modules",
-      "test": "yarn lint"
-    },
-    "devDependencies": {
-      "@vuepress/plugin-pwa": "^1.0.0-alpha.0",
-      "markdownlint-cli": "^0.16.0",
-      "vuepress": "^0.14.11"
-    }
+  "name": "awesome-nuxt",
+  "version": "1.0.0",
+  "description": "🎉 A curated list of awesome things related to Nuxt.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ansidev/awesome-nuxt.git"
+  },
+  "author": "Le Minh Tri <ansidev@gmail.com> (https://github.com/ansidev)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ansidev/awesome-vue/issues"
+  },
+  "homepage": "https://awesome-nuxt.js.org",
+  "keywords": [
+    "nuxt",
+    "nuxtjs",
+    "awesome",
+    "awesome-nuxt",
+    "awesome-list",
+    "vuepress"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "dev": "vuepress dev content",
+    "build": "vuepress build content",
+    "lint": "markdownlint . -i node_modules",
+    "test": "yarn lint"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.0.1",
+    "@vuepress/plugin-pwa": "^1.0.1",
+    "markdownlint-cli": "^0.17.0",
+    "vuepress": "^1.0.1"
   }
+}
