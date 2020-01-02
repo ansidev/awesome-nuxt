@@ -61,3 +61,4 @@
 - [Popcornee](https://popcornee.herokuapp.com) - A Nuxt app to consume TMDb API. Nuxt + UIKit
 - [Yad2](https://www.yad2.co.il) - The biggest classifieds website in Israel using Nuxt
 - [Vue SoundCloud](https://vue-soundcloud.herokuapp.com) - A SoundCloud client built with Vue and Nuxt.
+- [SOAL - School Of Accelerated Learning](http://schoolofacceleratedlearning.com/) - An Indian fullstack code learning school's official website built using Nuxt + tailwind.
