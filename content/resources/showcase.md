@@ -4,7 +4,7 @@
 - [Medioambiente Vital Fundazioa](https://medioambiente.fundacionvital.eus/) - Website for a campaign of enviromental awareness. In Araba, Basque Country. Build with NuxtJS + Bootstrap Vue + Drupal.
 - [Amujamu](https://amujamu.com) - Amujamu has the largest collection of Thailand tours. Book your desired one for the best deal. Amujamu, the best of its kind, should be your first choice when it comes to booking tours for Thailand. Tourism Authority of Thailand (TAT) approved tours &amp; activity marketplace.
 - [readable.report](https://readable.report/) - View all of your stats from all of your apps with a single easy-to-read report.
-- [homefinder.com](https://homefinder.com) - Nation-wide real estate portal in the US.  Find or or sell your home on HomeFinder!
+- [homefinder.com](https://homefinder.com) - Nation-wide real estate portal in the US.  Find or sell your home on HomeFinder!
 - [www.gamevix.com](https://www.gamevix.com/) - GameVix: Swap Video Game Discs - Spend much LESS 💰, play much MOAR 🎮! (Nuxt.js + Vuetify.js).
 - [netsells.co.uk](https://netsells.co.uk/) - Web agency website based on Nuxt.js powered by a Laravel backend.
 - [yineo.fr](https://yineo.fr/) - Freelance website based on Nuxt.js.
@@ -31,7 +31,7 @@
 - [Yearbook 2016–2017, Batten Institute for Entrepreneurship and Innovation, UVA](https://batten-yearbook.darden.virginia.edu/) - Static annual report.
 - [MODULE-5.com](https://module-5.com/en/) - Industrial company site with portfolio, i18n.
 - [academind.com](https://academind.com) - Online Education Site built with Nuxt.js (and teaching Nuxt.js!).
-- [Holadu.com](https://holadu.com) - Holadu | Find events near you.
+- [Holadu.com](https://holadu.com) - Holadu \| Find events near you.
 - [Cambridge Epigenetix](https://cambridge-epigenetix.com/) - Cambridge Epigenetix is pioneering the development and application of novel epigenetics-based diagnostics and therapeutics that will revolutionise the way we detect and treat disease.
 - [Developmint.de](https://developmint.de/?ref=awesome-nuxt) - Company page built with NuxtJS and TailwindCSS, including i18n, meta/og-tags and more!
 - [Maestromusic.today](https://maestromusic.today) - Classical music platform built with NuxtJS and WordPress REST API.
@@ -46,7 +46,6 @@
 - [Cute never dies](https://cuteneverdies.com/) - Original mask design web shop. Integrates with Stripe's API.
 - [beCamp](https://be.camp) - Open source website for a community-organized tech conference in Charlottesville, VA.
 - [CrossFit 701](https://crossfit701.com) - Custom website designed with Nuxt and using [vue-observe-visibility](https://github.com/Akryum/vue-observe-visibility) plugin to create nice transitions and animations.
-- [BTZhai](https://www.btzhai.top/) - Fast and modern torrent search engine, built on ElasticSearch + NuxtJS + Nuxt-i18n + SpringBoot. Searches and downloads the latest and hottest resources around the world!
 - [Blogram](https://blogram.me) - Iranian microblogging platform.
 - [Nunziella Design Portfolio](https://nunziellasalluce.com) - Digital Designer portfolio made with Nuxt.js and WordPress REST API.
 - [Portfolio of Jenil Gogari - Computational Designer](https://jgog.in) - Crafted using Chota, Vue.js, Nuxt.js and Simple Icons. Typeface is Inter UI.
@@ -56,12 +55,38 @@
 - [Rentcars.com](https://www.rentcars.com/) - We are a global company that connects people to the best car rentals options available.
 - [Agence Debord](https://www.agencedebord.com/) - Web agency website based on Nuxt.js powered by the WordPress Rest API.
 - [Flagpack](https://flag.pk) - An opensource flag icon library. Website is powered by Vue.js & Nuxt.js.
+- [Tyneside Lettings](https://www.tynesidelettings.com/) - Student and young professional accommodation specialists in Newcastle upon Tyne.
+- [R6Stats](https://r6stats.com/) - Search, view and compare Rainbow Six: Siege stats with thousands of players around the world.
 - [TecnoSpeed](https://tecnospeed.com.br) - An brazilian business focused in make solutions to others developers.
 - [PlugNotas](https://plugnotas.com.br) - An service to emit service invoices in Brazil.
 - [Oak Hill Cafe](https://www.oakhillcafe.com/) - A farm-to-table restaurant based in Greenville, SC built with Vue.js, Nuxt.js, and Prismic.io.
 - [PusatMarket](https://pusatmarket.com/) - PusatMarket is a marketplace that built with Nuxt.js.
-- [61Financial News](https://news.61financial.com.au) - Australia financial news platform for Chinese readers, powered by Nuxt.js with best practices and well-tuned performance.
+- [VueJS Dublin](https://www.vuejsdublin.com/) - Website for the local Vue meetup group in Dublin, Ireland.
+- [Scale Leap](https://www.scaleleap.com/) - Custom Software Development For Amazon Sellers.
+- [El Cable Amarillo](https://www.elcableamarillo.cc/) - Open source project for the use of programming and robotics in educational centers using software tools and free hardware.
+- [Zip Stores](https://zip.co/stores/) - Zip Pay and Zip Money Stores Directory. Zip is simple, fair and transparent credit and payment solutions that improve lives every day. We allow people to own the things they love now, and pay later, interest free.
+- [61 Financial News](https://news.61financial.com.au) - Australia financial news platform for Chinese readers, powered by Nuxt.js with best practices and well-tuned performance.
 - [Popcornee](https://popcornee.herokuapp.com) - A Nuxt app to consume TMDb API. Nuxt + UIKit
 - [Yad2](https://www.yad2.co.il) - The biggest classifieds website in Israel using Nuxt
+- [OneConcern](https://oneconcern.com) - Artifical Intelligence platform for Disasters ([source](https://github.com/acidjazz/oneconcern)).
+- [Pilot](https://pilot.com.au) - Online doctor consultation, Ecommerce Progressive Web Application made with Nuxt.js & Prisma.
+- [Icons8](https://icons8.com/) - Free Design Resources and Software.
+- [SUSHI](https://sushi.partners) - Still Undergoing Severe Hassle with Irritating paperwork? = SUSHI, Document generator for establishing company in Japan. 🍣
+- [benjaminstirrup.com](https://benjaminstirrup.com/) - Benjamin Stirrup's freelance and portfolio website based on Nuxt.js.
+- [Asociación Programo Ergo Sum](https://www.programoergosum.es/) - Open source project to learn programming at school. Non-profit organization.
+- [Vendic](https://vendic.nl/) - Vendic is a Dutch Magento 2 and PWA agency who build their own corporate website with Nuxt.Js.
+- [Soane Britain](https://www.soane.co.uk/) - High end furniture catalogue, PWA built with Nuxt.js powered by Magento 2 and Wordpress.
+- [snakit.in](https://www.snakit.in) - A static Nuxt.js site for an Indian snacks company.
+- [pmplgroup.com](https://www.pmplgroup.com/) - A completely static Nuxt.js website using Bulma.
+- [36 Pixels agency](https://www.36pixels.fr) - French website agency made with Nuxt.js.
+- [JessFlix](https://www.jessflix.com) - A website built for the movie review channel, JessFlix, running entirely on a Nuxt production server. Uses a Wordpress backend, and the YouTube API to curate video content.
 - [Vue SoundCloud](https://vue-soundcloud.herokuapp.com) - A SoundCloud client built with Vue and Nuxt.
 - [SOAL - School Of Accelerated Learning](https://schoolofacceleratedlearning.com/) - An Indian fullstack code learning school's official website built using Nuxt + tailwind.
+- [We Are Apartments](https://weareapartments.org/) ([source](https://github.com/acidjazz/waa)) We Are Apartments - helping people live in a home that's right for them.
+- [theoddwave.co.nz](https://theoddwave.co.nz/) - website builder for business startups in New Zealand using Nuxt.js, Vue.js and headless CMS.
+- [temp-mail.io](https://temp-mail.io/) - Disposable temporary email service.
+- [Freshworks Marketplace](https://www.freshworks.com/apps/) - Freshworks App Marketplace with over a 1000 apps trusted by over 30,000 businesses built using Nuxt.js.
+- [hurriyetemlak.com](https://hurriyetemlak.com) - The largest real estate portal in the Turkey. Over 18 billion traffic per month.
+- [moebelland.de](https://www.moebelland.de) - German furniture shopping aggregation site.
+- [EstadioBerria](https://estadioberria.fundacionvital.eus/) - Website with info about an architectural reform of a sports complex. In Araba, Basque Country. Build with NuxtJS + Bootstrap Vue + Directus.
+- [plannthat.com](https://www.plannthat.com) - Instagram planning, scheduling and analytics for beautiful brands.

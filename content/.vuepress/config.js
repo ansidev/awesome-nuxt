@@ -37,6 +37,7 @@ module.exports = {
           '/resources/modules',
           '/resources/tools',
           '/resources/official-examples',
+          '/resources/community-examples',
           '/resources/tutorials',
           '/resources/examples',
           '/resources/projects-using-nuxtjs',
