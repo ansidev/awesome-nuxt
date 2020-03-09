@@ -7,16 +7,12 @@
 > The labels show the Nuxt.js versions that were available at that time.
 
 ![Nuxt.js v1][nuxt-v1-label] = Nuxt.js version **1**
-<br>
 ![Nuxt.js v2][nuxt-v2-label] = Nuxt.js version **2**
-<br>
 ![Nuxt.js v3][nuxt-v3-label] = Nuxt.js version **3**
-
-<br>
 
 **Tutorials published in:**
 
-#### 2019
+## 2019
 
 ![Nuxt.js v2][nuxt-v2-label] ![Nuxt.js v1][nuxt-v1-label]
 
@@ -35,7 +31,7 @@
 - [Working with Ghost and Nuxt.js](https://ghost.org/docs/api/nuxtjs/)
 - [Build a blog with Nuxt (Vue.js), Strapi and Apollo](https://strapi.io/blog/build-a-blog-using-nuxt-strapi-and-apollo/)
 
-#### 2018
+## 2018
 
 ![Nuxt.js v2][nuxt-v2-label] ![Nuxt.js v1][nuxt-v1-label]
 
@@ -54,7 +50,7 @@
 - [PM2 Blue/Green Zero-Downtime Deployment Demo](https://github.com/CurtisBelt/pm2-nuxt-blue-green-deploy)
 - [VPS Deployment manual for Nuxt.js](https://gist.github.com/DreaMinder/e9fc988295378d8373521a93c3ca6d18)
 
-#### 2017
+## 2017
 
 ![Nuxt.js v1][nuxt-v1-label]
 
@@ -76,7 +72,7 @@
 - [Using Nuxt with Firebase and Firebase Auth](https://ohdoylerules.com/web/nuxt-firebase-starter/)
 - [Create and deploy a Nuxt.js application on Clever-Cloud in a few moments](https://medium.com/@k33g_org/create-and-deploy-a-nuxt-js-application-on-clever-cloud-in-a-few-moments-47474059d849)
 
-#### 2016
+## 2016
 
 ![Nuxt.js v1][nuxt-v1-label]
 
