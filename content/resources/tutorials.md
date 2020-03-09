@@ -7,7 +7,9 @@
 > The labels show the Nuxt.js versions that were available at that time.
 
 ![Nuxt.js v1][nuxt-v1-label] = Nuxt.js version **1**
+
 ![Nuxt.js v2][nuxt-v2-label] = Nuxt.js version **2**
+
 ![Nuxt.js v3][nuxt-v3-label] = Nuxt.js version **3**
 
 **Tutorials published in:**
