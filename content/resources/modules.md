@@ -123,3 +123,4 @@
 - [contentful-module](https://github.com/scaccogatto/contentful-module) - Multiple-env Contentful generator
 - [nuxt-netlify-cache](https://github.com/DreaMinder/nuxt-netlify-cache) - Speed up Netlify redeployments using build-cache.
 - [nuxt-custom-elements](https://github.com/GrabarzUndPartner/nuxt-custom-elements) - Publish your components as a vue-custom-element standalone build.
+- [hex-digital/nuxt-intercom](https://github.com/hex-digital/nuxt-intercom) - Nuxt module for simple integration with [Intercom](https://www.intercom.com/).
