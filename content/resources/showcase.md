@@ -92,3 +92,4 @@
 - [plannthat.com](https://www.plannthat.com) - Instagram planning, scheduling and analytics for beautiful brands.
 - [diskotek.tv](https://diskotek.tv) - Diskotek - Software and Advertising Agency.
 - [outweb.space](https://bb.outweb.space/en) — The game «Bulls Bears» — the board game about stockpile.
+- [mobydigital.com](https://mobydigital.com/en) - We make Digital Transformation happen.
