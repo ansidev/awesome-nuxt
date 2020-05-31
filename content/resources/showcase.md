@@ -91,4 +91,5 @@
 - [EstadioBerria](https://estadioberria.fundacionvital.eus/) - Website with info about an architectural reform of a sports complex. In Araba, Basque Country. Build with NuxtJS + Bootstrap Vue + Directus.
 - [plannthat.com](https://www.plannthat.com) - Instagram planning, scheduling and analytics for beautiful brands.
 - [diskotek.tv](https://diskotek.tv) - Diskotek - Software and Advertising Agency.
+- [outweb.space](https://bb.outweb.space/en) — The game «Bulls Bears» — the board game about stockpile.
 - [mobydigital.com](https://mobydigital.com/en) - We make Digital Transformation happen.
