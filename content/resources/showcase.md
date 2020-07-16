@@ -76,3 +76,4 @@
 - [diskotek.tv](https://diskotek.tv) - Diskotek - Software and Advertising Agency.
 - [outweb.space](https://bb.outweb.space/en) — The game «Bulls Bears» — the board game about stockpile.
 - [mobydigital.com](https://mobydigital.com/en) - We make Digital Transformation happen.
+- [311 Québec City](https://311.ville.quebec.qc.ca/) - Web and mobile application for citizens of Québec City. Lets them make useful requests to city officials and services. Multilingual, cross-platform PWA built with Nuxt.js, Cordova, POEditor, TypeScript ([case study](https://snipcart.com/blog/nuxt-pwa-311)).
