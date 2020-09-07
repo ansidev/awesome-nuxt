@@ -65,3 +65,4 @@
 - [tota.sk](https://tota.sk) - NPO in Slovakia cherishing the Rusyn culture. Built with Nuxt.js and Kentico Kontent ([source code also available](https://github.com/surfinzap/tota)).
 - [mute.vc](https://github.com/tmm/mute.vc) - Mute investors on Twitter.
 - [ZenEstate](https://bitbucket.org/timotheeHub/zenestate-client) - Singapore-based real estate agent search engine based on Nuxt.js.
+- [Wammes Gifts](https://www.wammes-gifts.nl) - Dutch ecommerce websites for gifts with specialized giftfinder.
