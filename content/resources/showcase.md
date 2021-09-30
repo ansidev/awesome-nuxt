@@ -79,3 +79,4 @@
 - [mobydigital.com](https://mobydigital.com/en) - We make Digital Transformation happen.
 - [311 Québec City](https://311.ville.quebec.qc.ca/) - Web and mobile application for citizens of Québec City. Lets them make useful requests to city officials and services. Multilingual, cross-platform PWA built with Nuxt.js, Cordova, POEditor, TypeScript ([case study](https://snipcart.com/blog/nuxt-pwa-311)).
 - [Built With Nuxt](https://builtwithnuxt.com/) - Showcase of projects and websites made with NuxtJS.
+- [Mystery Football Shirts](https://boxtobox.uk) - An E-commerce app using Nuxt, Node & Mongdo DB.
