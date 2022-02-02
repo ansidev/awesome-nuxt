@@ -1,5 +1,6 @@
 # Projects Using Nuxt.js
 
+- [Journalistic](https://journalisticapp.com) - Micro journaling PWA with minimalistic design.
 - [RepoTracker](https://repo-tracker.com) - Easily keep track of commits, issues and PRs in multiple GitHub repositories. Built with Nuxt 3.
 - [Amujamu](https://amujamu.com) - Amujamu has the largest collection of Thailand tours. Book your desired one for the best deal. Amujamu, the best of its kind, should be your first choice when it comes to booking tours for Thailand. Tourism Authority of Thailand (TAT) approved tours &amp; activity marketplace.
 - [Via Montessori](http://via-montessori.com) - Collection of Montessori educational activities and articles; Nuxt fetches  content from Strapi using Apollo.
