@@ -91,7 +91,7 @@ module.exports = {
       skipWaiting: true
     }],
     ["@vuepress/google-analytics", {
-      id: "G-FS5W4Q6V9M"
+      id: process.env.GA_ID
     }],
     [
       '@vuepress/docsearch',
