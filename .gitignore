@@ -67,3 +67,5 @@ typings/
 .serverless
 
 .DS_Store
+.cache/
+.temp/
