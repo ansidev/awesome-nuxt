@@ -22,7 +22,6 @@
 - [baisheng/nuxt-thinkjs3](https://github.com/baisheng/nuxt-thinkjs3) - Nuxt.js + Thinkjs FrameWork.
 - [kavalcante/nuxt-element-apollo](https://github.com/kavalcante/nuxt-element-apollo) - Nuxt.js + Element (with custom Theme) + Apollo.
 - [mandaputtra/nuxtbulma-starter](https://github.com/mandaputtra/nuxtbulma-starter) - Nuxt.js + Bulma project scafolding.
-- [woodgates/feathers-nuxt](https://github.com/woodgates/feathers-nuxt) - Implementation of nuxt 1.4.2 with full template feathers 3.2.1 (expressjs, socket.io, hooks, etc).
 - [bitkris-dev/bolide-nuxt-template](https://github.com/bitkris-dev/bolide-nuxt-template) - Question-based template (CSS framework choice + preinstalled modules).
 - [melrefaie/nuxt-cypress](https://github.com/melrefaie/nuxt-cypress) - Nuxt.js + Cypress starter project template.
 - [muhibbudins/nuxt-multiple](https://github.com/muhibbudins/nuxt-multiple) - Nuxt.js starter template for Nuxt Multiple instance with Express Backpack, Element UI, Axios & Example APIs, SASS / SCSS Loader, Vuex Store.
@@ -41,3 +40,6 @@
 - [yashha/wp-nuxt-stack-starter](https://github.com/yashha/wp-nuxt-stack-starter) - Opinionated starter featuring [Wordpress integration](https://github.com/yashha/wp-nuxt) and [Nuxt Stack](https://nuxtstack.org/) with basic SEO configuration, rss feed and sitemap.
 - [suf-stack/generator-suf-stack-aws-koa-nuxt](https://github.com/suf-stack/generator-suf-stack-aws-koa-nuxt) - Serverless, Universal, Full-stack yeoman generator for AWS/Koa.js/Nuxt.js.
 - [hex-digital/nuxtpress](https://github.com/hex-digital/nuxtpress) - A modern Nuxt + headless WordPress starter kit; dockerised, SEO-friendly and with development and testing tools pre-integrated.
+- [mmoollllee/nuxt-starter-template](https://github.com/mmoollllee/nuxt-starter-template) – Template for basic static site generated marketing website.
+- [vinayakkulkarni/module-template-ava](https://github.com/vinayakkulkarni/module-template-ava) - Starter template for Nuxt.js Modules using Ava instead of Jest.
+- [rk-nuxt-atomic-design-starter](https://github.com/RadKod/rk-nuxt-atomic-design-starter) - Atomic Design starter template for nuxt.js.

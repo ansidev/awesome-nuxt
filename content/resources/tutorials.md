@@ -1,8 +1,8 @@
 # Tutorials
 
-[nuxt-v1-label]: /icons/nuxt-v1-label.svg 'Nuxt.js v1'
-[nuxt-v2-label]: /icons/nuxt-v2-label.svg 'Nuxt.js v2'
-[nuxt-v3-label]: /icons/nuxt-v3-label.svg 'Nuxt.js v3'
+[nuxt-v1-label]: /icons/nuxt-v1-label.svg "Nuxt.js v1"
+[nuxt-v2-label]: /icons/nuxt-v2-label.svg "Nuxt.js v2"
+[nuxt-v3-label]: /icons/nuxt-v3-label.svg "Nuxt.js v3"
 
 > The labels show the Nuxt.js versions that were available at that time.
 
@@ -13,6 +13,14 @@
 ![Nuxt.js v3][nuxt-v3-label] = Nuxt.js version **3**
 
 **Tutorials published in:**
+
+## 2020
+
+![Nuxt.js v2][nuxt-v2-label] ![Nuxt.js v1][nuxt-v1-label]
+
+- [Deploying Nuxt.js on Google Cloud Run Serverless](https://dev.to/sakko/deploying-nuxtjs-on-google-cloud-run-1fic)
+- [What to do when Vue hydration fails](https://blog.lichter.io/posts/vue-hydration-error/?ref=awesome-nuxt)
+- [When should you Use Nuxt.js instead of Vue.js?](https://medium.com/javascript-in-plain-english/when-should-you-use-nuxt-js-instead-of-vue-js-8558a33b91c6)
 
 ## 2019
 
@@ -32,6 +40,7 @@
 - [How to reduce the size of Nuxt files in 10%-20% with Brotli + Cloudfront](https://www.linkedin.com/pulse/how-use-brotli-cloudfront-nuxt-serverless-edison-harada/)
 - [Working with Ghost and Nuxt.js](https://ghost.org/docs/api/nuxtjs/)
 - [Build a blog with Nuxt (Vue.js), Strapi and Apollo](https://strapi.io/blog/build-a-blog-using-nuxt-strapi-and-apollo/)
+- [Nuxt.js — Two super easy changes for starters that can dramatically improve the performance](https://lukeliutingchun.medium.com/nuxt-js-two-super-easy-change-that-can-dramatically-improve-the-performance-c954ee171d02)
 
 ## 2018
 
@@ -65,7 +74,7 @@
 - [Role Based Authorization for your Vue.js and Nuxt.js Applications Using vue-kindergarten](https://medium.com/@JiriChara/role-based-authorization-for-your-vue-js-and-nuxt-js-applications-using-vue-kindergarten-fd483e013ec5)
 - [Create and publish a Nuxt.js powered website on GitHub pages](https://hackernoon.com/create-and-publish-a-nuxt-powered-website-on-github-pages-3e922dfa7372)
 - [Introduction To Server Rendered Vue.js Apps With Nuxt](https://medium.com/codingthesmartway-com-blog/introduction-to-server-rendered-vue-js-apps-with-nuxt-91dbfd80795a)
-- [深入NUXT，看看一条命令行的背后到底发生了什么](https://segmentfault.com/a/1190000008114613)
+- [深入 NUXT，看看一条命令行的背后到底发生了什么](https://segmentfault.com/a/1190000008114613)
 - [用 nuxt 开发部署一个 v2ex](https://orangexc.xyz/2017/06/19/n2ex/)
 - [Integrate Vue InstantSearch with Nuxt.js for server side rendered search with Algolia](https://community.algolia.com/vue-instantsearch/advanced/integrate-with-nuxt.html)
 - [Handling server side rendering and SEO with nuxt.js](https://medium.com/@devlob/handling-server-side-rendering-and-seo-with-nuxt-js-fa8a2b0ae2ee)
