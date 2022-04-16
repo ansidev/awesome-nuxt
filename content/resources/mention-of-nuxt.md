@@ -1,4 +1,4 @@
-# Mention of Nuxt.js
+# Mention of Nuxt
 
 - [Evan You - State of Vue \| VueConf 2017](https://youtu.be/lG0Ys-2d4MA?t=9m25s)
 - [Sean Larkin - (Webpack) Code splitting patterns in Vue.js \| VueConf 2017](https://youtu.be/rn97hCNQsKI?t=12m20s)
