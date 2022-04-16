@@ -1,6 +1,8 @@
 ---
 home: true
 heroImage: /hero.png
-actionText: Get Started →
-actionLink: /resources/official-resources
+actions:
+  - text: Get Started →
+    link: /resources/official-resources
+    type: primary
 ---

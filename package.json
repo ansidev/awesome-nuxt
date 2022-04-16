@@ -31,9 +31,11 @@
     "test": "yarn lint"
   },
   "devDependencies": {
-    "@vuepress/plugin-google-analytics": "^1.9.7",
-    "@vuepress/plugin-pwa": "^1.9.7",
+    "@vuepress/plugin-docsearch": "^2.0.0-beta.38",
+    "@vuepress/plugin-git": "^2.0.0-beta.38",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.38",
+    "@vuepress/plugin-pwa": "^2.0.0-beta.38",
     "markdownlint-cli": "^0.31.1",
-    "vuepress": "^1.9.7"
+    "vuepress": "^2.0.0-beta.39"
   }
 }
