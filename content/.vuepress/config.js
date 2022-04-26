@@ -1,4 +1,7 @@
-const isProd = process.env.NODE_ENV === "production";
+const { defaultTheme } = require('vuepress')
+const { googleAnalyticsPlugin } = require('@vuepress/plugin-google-analytics')
+
+const isProd = process.env.NODE_ENV === "production"
 
 module.exports = {
   title: "Awesome NuxtJS",
@@ -55,8 +58,7 @@ module.exports = {
     }],
   ],
   base: "/",
-  theme: "@vuepress/theme-default",
-  themeConfig: {
+  theme: defaultTheme({
     repo: "ansidev/awesome-nuxt",
     editLinks: true,
     lastUpdated: "Last Updated",
@@ -85,14 +87,14 @@ module.exports = {
       // only enable git plugin in production mode
       git: isProd,
     },
-  },
+  }),
   plugins: [
     ["@vuepress/pwa", {
       skipWaiting: true
     }],
-    ["@vuepress/google-analytics", {
+    googleAnalyticsPlugin({
       id: process.env.GA_ID
-    }],
+    }),
     [
       '@vuepress/docsearch',
       {
