@@ -1,5 +1,7 @@
 const { defaultTheme } = require('vuepress')
+const { docsearchPlugin } = require('@vuepress/plugin-docsearch')
 const { googleAnalyticsPlugin } = require('@vuepress/plugin-google-analytics')
+const { pwaPlugin } = require('@vuepress/plugin-pwa')
 
 const isProd = process.env.NODE_ENV === "production"
 
@@ -89,18 +91,15 @@ module.exports = {
     },
   }),
   plugins: [
-    ["@vuepress/pwa", {
-      skipWaiting: true
-    }],
+    docsearchPlugin({
+      apiKey: process.env.DOCSEARCH_API_KEY,
+      indexName: process.env.DOCSEARCH_INDEX_NAME
+    }),
     googleAnalyticsPlugin({
       id: process.env.GA_ID
     }),
-    [
-      '@vuepress/docsearch',
-      {
-        apiKey: process.env.DOCSEARCH_API_KEY,
-        indexName: process.env.DOCSEARCH_INDEX_NAME
-      },
-    ],
+    pwaPlugin({
+      skipWaiting: true
+    }),
   ],
 };
