@@ -98,8 +98,8 @@ module.exports = {
     [
       '@vuepress/docsearch',
       {
-        apiKey: "67346acb58a687206ed3790536caa923",
-        indexName: "awesome-nuxt"
+        apiKey: process.env.DOCSEARCH_API_KEY,
+        indexName: process.env.DOCSEARCH_INDEX_NAME
       },
     ],
   ],
