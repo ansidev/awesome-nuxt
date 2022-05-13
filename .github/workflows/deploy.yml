@@ -16,6 +16,10 @@ jobs:
         uses: borales/actions-yarn@v2.3.0
         with:
           cmd: build # will run `yarn build` command
+        env:
+          DOCSEARCH_API_KEY: ${{ secrets.DOCSEARCH_API_KEY }}
+          DOCSEARCH_INDEX_NAME: ${{ secrets.DOCSEARCH_INDEX_NAME }}
+          GA_ID: ${{ secrets.GA_ID }}
       - name: Test
         uses: borales/actions-yarn@v2.3.0
         with:
@@ -26,6 +30,3 @@ jobs:
           build_dir: content/.vuepress/dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DOCSEARCH_API_KEY: ${{ secrets.DOCSEARCH_API_KEY }}
-          DOCSEARCH_INDEX_NAME: ${{ secrets.DOCSEARCH_INDEX_NAME }}
-          GA_ID: ${{ secrets.GA_ID }}
