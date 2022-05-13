@@ -69,3 +69,6 @@ typings/
 .DS_Store
 .cache/
 .temp/
+
+# Visual Studio Code Settings
+.vscode/
