@@ -92,6 +92,7 @@ module.exports = {
   }),
   plugins: [
     docsearchPlugin({
+      appId: process.env.DOCSEARCH_APP_ID,
       apiKey: process.env.DOCSEARCH_API_KEY,
       indexName: process.env.DOCSEARCH_INDEX_NAME
     }),
