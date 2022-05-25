@@ -17,6 +17,7 @@ jobs:
         with:
           cmd: build # will run `yarn build` command
         env:
+          DOCSEARCH_APP_ID: ${{ secrets.DOCSEARCH_APP_ID }}
           DOCSEARCH_API_KEY: ${{ secrets.DOCSEARCH_API_KEY }}
           DOCSEARCH_INDEX_NAME: ${{ secrets.DOCSEARCH_INDEX_NAME }}
           GA_ID: ${{ secrets.GA_ID }}
