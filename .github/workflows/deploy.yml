@@ -14,31 +14,15 @@ jobs:
         with:
           node-version: 16
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.1
-        id: pnpm-install
-        with:
-          version: 7
-          run_install: false
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
       - name: Install dependencies
-        run: pnpm install
+        uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: install # will run `yarn install` command
 
       - name: Build
-        run: pnpm build
+        uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: build # will run `yarn build` command
         env:
           DOCSEARCH_APP_ID: ${{ secrets.DOCSEARCH_APP_ID }}
           DOCSEARCH_API_KEY: ${{ secrets.DOCSEARCH_API_KEY }}
@@ -46,7 +30,9 @@ jobs:
           GA_ID: ${{ secrets.GA_ID }}
 
       - name: Test
-        run: pnpm test
+        uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: test # will run `yarn test` command
 
       - name: Deploy pages
         uses: crazy-max/ghaction-github-pages@v2
