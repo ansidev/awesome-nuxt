@@ -7,11 +7,18 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
       - name: Install dependencies
         uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install # will run `yarn install` command
+
       - name: Build
         uses: borales/actions-yarn@v2.3.0
         with:
@@ -21,10 +28,12 @@ jobs:
           DOCSEARCH_API_KEY: ${{ secrets.DOCSEARCH_API_KEY }}
           DOCSEARCH_INDEX_NAME: ${{ secrets.DOCSEARCH_INDEX_NAME }}
           GA_ID: ${{ secrets.GA_ID }}
+
       - name: Test
         uses: borales/actions-yarn@v2.3.0
         with:
           cmd: test # will run `yarn test` command
+
       - name: Deploy pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
