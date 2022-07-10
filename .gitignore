@@ -54,6 +54,9 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+# Optional npm cache directory
+.yarn
+
 # dotenv environment variables file
 .env
 
