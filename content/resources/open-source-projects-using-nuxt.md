@@ -8,7 +8,7 @@
 
 | Name | Description | Repository |
 |---|---|---|
-| [CSS Gradient Text](https://cssgradienttext.com/) | CSS gradient text | free online gradient text generator | [github](https://github.com/KareemDa/gradient-text) |
+| [CSS Gradient Text](https://cssgradienttext.com/) | CSS gradient text - Free online gradient text generator | [github](https://github.com/KareemDa/gradient-text) |
 
 ![Nuxt v2][nuxt-v2-label]
 
