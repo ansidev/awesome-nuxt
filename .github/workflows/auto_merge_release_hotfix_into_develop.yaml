@@ -1,0 +1,40 @@
+name: auto_merge_into_develop
+
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - develop
+
+env:
+  BRANCH_DEVELOP: develop
+
+jobs:
+  auto_merge_into_develop:
+    name: Merge release into develop
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    # only merge pull requests that begin with 'release/' or 'hotfix/'
+    if: startsWith(github.head_ref, 'release/') || startsWith(github.head_ref, 'hotfix/')
+
+    steps:
+      - name: Set GitHub token
+        run: |
+          echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" >> $GITHUB_ENV
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ env.GH_TOKEN }}
+          # needed by "gh pr create"
+          fetch-depth: 0
+
+      - name: Merge PR
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+          PR_TITLE: Merge branch '${{ github.head_ref }}' into ${{ env.BRANCH_DEVELOP }}
+        run: |
+          gh pr merge ${PR_NUMBER} -m -d -t "${PR_TITLE}"
