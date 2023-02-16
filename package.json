@@ -28,22 +28,25 @@
     "dev": "vuepress dev content",
     "build": "vuepress build content",
     "lint": "markdownlint-cli2 ./content/**/*.md ",
-    "test": "yarn lint"
+    "test": "pnpm lint"
   },
   "devDependencies": {
+    "@vuepress/client": "^2.0.0-beta.60",
     "@vuepress/plugin-docsearch": "^2.0.0-beta.60",
     "@vuepress/plugin-git": "^2.0.0-beta.60",
     "@vuepress/plugin-google-analytics": "^2.0.0-beta.60",
     "@vuepress/plugin-pwa": "^2.0.0-beta.60",
     "markdownlint-cli2": "^0.6.0",
+    "vue": "^3.2.47",
     "vuepress": "^2.0.0-beta.60"
   },
   "resolutions": {
+    "@vuepress/client": "2.0.0-beta.60",
     "@vuepress/plugin-docsearch": "2.0.0-beta.60",
     "@vuepress/plugin-git": "2.0.0-beta.60",
     "@vuepress/plugin-google-analytics": "2.0.0-beta.60",
     "@vuepress/plugin-pwa": "2.0.0-beta.60",
     "vuepress": "2.0.0-beta.60"
   },
-  "packageManager": "yarn@3.4.1"
+  "packageManager": "pnpm@7.27.0"
 }

@@ -15,7 +15,7 @@ the required dependencies:
 ```bash
 git clone https://github.com/ansidev/awesome-nuxt.git
 cd awesome-nuxt
-yarn install
+pnpm install
 ```
 
 Run the `dev` script to compile the content and spawn a local server to serve
@@ -23,16 +23,16 @@ the compiled code. While this script is running, any changes made to the
 markdown files will automatically be updated on the locally served pages.
 
 ```bash
-yarn dev
+pnpm run dev
 ```
 
-To prepare the application for deployment, first run `yarn build` to compile
+To prepare the application for deployment, first run `pnpm run build` to compile
 the application in production mode. This will generate a directory in
 `content/.vuepress` called `dist`.
 
 ```bash
-yarn install -g serve
-yarn build
+pnpm add -g serve
+pnpm run build
 cd content/.vuepress/dist
 serve .
 ```
