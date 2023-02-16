@@ -2439,14 +2439,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-google-analytics@npm:^2.0.0-beta.48":
-  version: 2.0.0-beta.50-pre.1
-  resolution: "@vuepress/plugin-google-analytics@npm:2.0.0-beta.50-pre.1"
+"@vuepress/plugin-google-analytics@npm:2.0.0-beta.60":
+  version: 2.0.0-beta.60
+  resolution: "@vuepress/plugin-google-analytics@npm:2.0.0-beta.60"
   dependencies:
-    "@vuepress/client": 2.0.0-beta.50-pre.1
-    "@vuepress/core": 2.0.0-beta.50-pre.1
-    "@vuepress/utils": 2.0.0-beta.50-pre.1
-  checksum: 65fc67fa5b3a27e8a198c592d272c773700955281a3fa78d9a711876dc56a2920186b005c594663a474c18fcf3a97728e3e4a2870ae08df713a96c09c2ba5022
+    "@vuepress/client": 2.0.0-beta.60
+    "@vuepress/core": 2.0.0-beta.60
+    "@vuepress/utils": 2.0.0-beta.60
+  checksum: 8a3410f33f2bd04a2eb9b59d284c4025dceec87184df544f53e5df4d56b15e85abbafb69d0484049ba9f37576c1e6c578946ab4628bbd7b7debf50074015a2f4
   languageName: node
   linkType: hard
 
@@ -2835,7 +2835,7 @@ __metadata:
   dependencies:
     "@vuepress/plugin-docsearch": ^2.0.0-beta.60
     "@vuepress/plugin-git": ^2.0.0-beta.60
-    "@vuepress/plugin-google-analytics": ^2.0.0-beta.48
+    "@vuepress/plugin-google-analytics": ^2.0.0-beta.60
     "@vuepress/plugin-pwa": ^2.0.0-beta.48
     markdownlint-cli2: ^0.6.0
     vuepress: ^2.0.0-beta.60
