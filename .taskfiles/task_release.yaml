@@ -57,7 +57,7 @@ tasks:
       VERSION_TAG: ${TAG_PREFIX}{{.CLI_ARGS}}
     cmds:
       - echo "Releasing version {{.VERSION_TAG}}"
-      - task changelog-next -- {{.CLI_ARGS}}
+      - task release:changelog-next -- {{.CLI_ARGS}}
       - changie merge
-      - task commit-release -- {{.CLI_ARGS}}
+      - task release:commit-release -- {{.CLI_ARGS}}
     silent: true
