@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 overrides:
-  '@vuepress/client': 2.0.0-beta.60
+  '@vuepress/client': 2.0.0-beta.50-pre.1
   '@vuepress/plugin-docsearch': 2.0.0-beta.60
   '@vuepress/plugin-git': 2.0.0-beta.60
   '@vuepress/plugin-google-analytics': 2.0.0-beta.60
@@ -9,7 +9,7 @@ overrides:
   vuepress: 2.0.0-beta.60
 
 specifiers:
-  '@vuepress/client': 2.0.0-beta.60
+  '@vuepress/client': 2.0.0-beta.50-pre.1
   '@vuepress/plugin-docsearch': 2.0.0-beta.60
   '@vuepress/plugin-git': 2.0.0-beta.60
   '@vuepress/plugin-google-analytics': 2.0.0-beta.60
@@ -19,14 +19,14 @@ specifiers:
   vuepress: 2.0.0-beta.60
 
 devDependencies:
-  '@vuepress/client': 2.0.0-beta.60
+  '@vuepress/client': 2.0.0-beta.50-pre.1
   '@vuepress/plugin-docsearch': 2.0.0-beta.60
   '@vuepress/plugin-git': 2.0.0-beta.60
   '@vuepress/plugin-google-analytics': 2.0.0-beta.60
   '@vuepress/plugin-pwa': 2.0.0-beta.60
   markdownlint-cli2: 0.6.0
   vue: 3.2.47
-  vuepress: 2.0.0-beta.60_snvqa5y7zj4eyr5mp3ym37ho7q
+  vuepress: 2.0.0-beta.60_qbyv3gjls3b4emc65gnh5ionqa
 
 packages:
 
@@ -1898,7 +1898,7 @@ packages:
     resolution: {integrity: sha512-nf+UAKNlAEZXZqu2Ztvr8Hg/5CtevWxvQGfYKV4lhw8UmoDjKKHoHPpPhF1QTUbnZ8W+jPLzIVz+hjunzsxl/A==}
     dependencies:
       '@vitejs/plugin-vue': 4.0.0_vite@4.0.4+vue@3.2.47
-      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/client': 2.0.0-beta.50-pre.1
       '@vuepress/core': 2.0.0-beta.60
       '@vuepress/shared': 2.0.0-beta.60
       '@vuepress/utils': 2.0.0-beta.60
@@ -1936,11 +1936,11 @@ packages:
       - supports-color
     dev: true
 
-  /@vuepress/client/2.0.0-beta.60:
-    resolution: {integrity: sha512-WU5VGeDp41A2dVXqp18YBggflIjTq68mA+s5TCz93wk+7elAmPAkWKcobQBYQgvsuwHyg9nWulZAfMN6OEygKQ==}
+  /@vuepress/client/2.0.0-beta.50-pre.1:
+    resolution: {integrity: sha512-uhN/LTwCcVLnQjDnrEDMaiPT2bi4mQrvwdtwURnrSZ7dCIgXQ+DMKP1v6+f2vgAlrw3FLnPd97yd3V7lrQs8Ow==}
     dependencies:
       '@vue/devtools-api': 6.5.0
-      '@vuepress/shared': 2.0.0-beta.60
+      '@vuepress/shared': 2.0.0-beta.50-pre.1
       vue: 3.2.47
       vue-router: 4.1.6_vue@3.2.47
     dev: true
@@ -1948,7 +1948,7 @@ packages:
   /@vuepress/core/2.0.0-beta.60:
     resolution: {integrity: sha512-HkUkqBnBI7GMVZGxdzV4C/iyFwPo215sVLYvZVEWpQIaLk/47WkK0sHtz/1i00ujwJC3uGOH1+f0IHkxzqjUmg==}
     dependencies:
-      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/client': 2.0.0-beta.50-pre.1
       '@vuepress/markdown': 2.0.0-beta.60
       '@vuepress/shared': 2.0.0-beta.60
       '@vuepress/utils': 2.0.0-beta.60
@@ -1983,7 +1983,7 @@ packages:
   /@vuepress/plugin-active-header-links/2.0.0-beta.60:
     resolution: {integrity: sha512-L+KijW7FvoDWMTd6wiIZhMA/uZYgMhiukL6IaVWtQ0COyWGIjaZUlX+mHd1munSzz4aWBMbck7no82bPswCh0g==}
     dependencies:
-      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/client': 2.0.0-beta.50-pre.1
       '@vuepress/core': 2.0.0-beta.60
       '@vuepress/utils': 2.0.0-beta.60
       ts-debounce: 4.0.0
@@ -1996,7 +1996,7 @@ packages:
   /@vuepress/plugin-back-to-top/2.0.0-beta.60:
     resolution: {integrity: sha512-vpVTA6EwWjjYyl6Op5J16RV6rEvwUYkLnjYhJ2qWroDb8U2x32HGWFJZQFIyatGO+oU6UBVYow90j2+Ery2g6g==}
     dependencies:
-      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/client': 2.0.0-beta.50-pre.1
       '@vuepress/core': 2.0.0-beta.60
       '@vuepress/utils': 2.0.0-beta.60
       ts-debounce: 4.0.0
@@ -2025,7 +2025,7 @@ packages:
       '@docsearch/css': 3.3.3
       '@docsearch/js': 3.3.3
       '@docsearch/react': 3.3.3
-      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/client': 2.0.0-beta.50-pre.1
       '@vuepress/core': 2.0.0-beta.60
       '@vuepress/shared': 2.0.0-beta.60
       '@vuepress/utils': 2.0.0-beta.60
@@ -2043,7 +2043,7 @@ packages:
   /@vuepress/plugin-external-link-icon/2.0.0-beta.60:
     resolution: {integrity: sha512-We4YmS4G7sWoOec/FKYhTM86qRCMBbDThcxOiPm6sWHrhTdxk3bFgJq/DfqJU/ply1ta72AWep0rEY6fj6JJ2A==}
     dependencies:
-      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/client': 2.0.0-beta.50-pre.1
       '@vuepress/core': 2.0.0-beta.60
       '@vuepress/markdown': 2.0.0-beta.60
       '@vuepress/shared': 2.0.0-beta.60
@@ -2066,7 +2066,7 @@ packages:
   /@vuepress/plugin-google-analytics/2.0.0-beta.60:
     resolution: {integrity: sha512-Uq8UiYh2O3pGG7CR+Me6DldumcIA8xnr6hPqjFdqpi4heQifepxxSY1VQcjGrhu1F/8m16O5MryKMaNtg12BqA==}
     dependencies:
-      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/client': 2.0.0-beta.50-pre.1
       '@vuepress/core': 2.0.0-beta.60
       '@vuepress/utils': 2.0.0-beta.60
     transitivePeerDependencies:
@@ -2076,7 +2076,7 @@ packages:
   /@vuepress/plugin-medium-zoom/2.0.0-beta.60:
     resolution: {integrity: sha512-KiJui/sTIHa321jJ/dc11ysyqTMj4Sz9tWoTSnwBJ4nebaO/0OFGQcFajk2+1ELs4poUh/w0THxc+NskR+bf+g==}
     dependencies:
-      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/client': 2.0.0-beta.50-pre.1
       '@vuepress/core': 2.0.0-beta.60
       '@vuepress/utils': 2.0.0-beta.60
       medium-zoom: 1.0.8
@@ -2088,7 +2088,7 @@ packages:
   /@vuepress/plugin-nprogress/2.0.0-beta.60:
     resolution: {integrity: sha512-zRdJP39qFO8q9TAwlCS4tLOd2rLGtkKqkPTsfhjtWwDqSbtTHy0GqVBL8KJUy3H0+qSiyvtC647yLNRbJ9LOlw==}
     dependencies:
-      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/client': 2.0.0-beta.50-pre.1
       '@vuepress/core': 2.0.0-beta.60
       '@vuepress/utils': 2.0.0-beta.60
       vue: 3.2.47
@@ -2119,7 +2119,7 @@ packages:
   /@vuepress/plugin-pwa/2.0.0-beta.60:
     resolution: {integrity: sha512-v+ohgXgZAEb/WCi8c74RNOPB0N91RaHalkuIy8aa3nhrKd41Rp06PAaDDxtrm4zmMlQKkqTCO78ia9eY75GW0Q==}
     dependencies:
-      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/client': 2.0.0-beta.50-pre.1
       '@vuepress/core': 2.0.0-beta.60
       '@vuepress/utils': 2.0.0-beta.60
       mitt: 3.0.0
@@ -2135,13 +2135,19 @@ packages:
     resolution: {integrity: sha512-3b34sXEAzShvUzeEMA/0JE4VrLxoMqGJOGMl0I9m0DKg2apgjRG6nYYq6gUnJW0gcUVK+tOOOHsMT6mTMs3xdA==}
     dependencies:
       '@vue/devtools-api': 6.5.0
-      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/client': 2.0.0-beta.50-pre.1
       '@vuepress/core': 2.0.0-beta.60
       '@vuepress/shared': 2.0.0-beta.60
       '@vuepress/utils': 2.0.0-beta.60
       vue: 3.2.47
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@vuepress/shared/2.0.0-beta.50-pre.1:
+    resolution: {integrity: sha512-Gk6ikIV2V8LMokc+H/juH+kBOigo38Woup42Q2pmmWqmlwdLqbUcCYZSt/z+opeOUAqC9s3CZnKR8xCw+qo8BQ==}
+    dependencies:
+      '@vue/shared': 3.2.47
     dev: true
 
   /@vuepress/shared/2.0.0-beta.60:
@@ -2159,7 +2165,7 @@ packages:
       sass-loader:
         optional: true
     dependencies:
-      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/client': 2.0.0-beta.50-pre.1
       '@vuepress/core': 2.0.0-beta.60
       '@vuepress/plugin-active-header-links': 2.0.0-beta.60
       '@vuepress/plugin-back-to-top': 2.0.0-beta.60
@@ -4148,7 +4154,7 @@ packages:
       '@vue/shared': 3.2.47
     dev: true
 
-  /vuepress-vite/2.0.0-beta.60_snvqa5y7zj4eyr5mp3ym37ho7q:
+  /vuepress-vite/2.0.0-beta.60_qbyv3gjls3b4emc65gnh5ionqa:
     resolution: {integrity: sha512-ljHvo419nbfYl/cQecVbYL4bwJjUOX0+z76v/4yX6ODeGIpdHIs7ARZ4t52mr0EEfwP6aZbZa+qFZTTQutxAuQ==}
     hasBin: true
     peerDependencies:
@@ -4157,7 +4163,7 @@ packages:
     dependencies:
       '@vuepress/bundler-vite': 2.0.0-beta.60
       '@vuepress/cli': 2.0.0-beta.60
-      '@vuepress/client': 2.0.0-beta.60
+      '@vuepress/client': 2.0.0-beta.50-pre.1
       '@vuepress/core': 2.0.0-beta.60
       '@vuepress/theme-default': 2.0.0-beta.60
       vue: 3.2.47
@@ -4174,11 +4180,11 @@ packages:
       - ts-node
     dev: true
 
-  /vuepress/2.0.0-beta.60_snvqa5y7zj4eyr5mp3ym37ho7q:
+  /vuepress/2.0.0-beta.60_qbyv3gjls3b4emc65gnh5ionqa:
     resolution: {integrity: sha512-evkv5PtX5pdlEyY5EcEV+rN/HTmi8iG7ZcvAnMFfYKWdvKiUjE+/DPwZfmE8emx33FEE2htbAKgtruABTocEjA==}
     hasBin: true
     dependencies:
-      vuepress-vite: 2.0.0-beta.60_snvqa5y7zj4eyr5mp3ym37ho7q
+      vuepress-vite: 2.0.0-beta.60_qbyv3gjls3b4emc65gnh5ionqa
     transitivePeerDependencies:
       - '@types/node'
       - '@vue/composition-api'
