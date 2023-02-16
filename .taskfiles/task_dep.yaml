@@ -4,6 +4,7 @@ vars:
   GIT_REMOTE: origin
   BRANCH_BASE: develop
   BRANCH_DEP_PREFIX: deps
+  COMMIT_FILES: package.json yarn.lock
 
 includes:
   site:
@@ -43,7 +44,7 @@ tasks:
       PACKAGE_VERSION:
         sh: npm view {{.PACKAGE_NAME}} version
     cmds:
-      - git add package.json pnpm-lock.yaml src/auto-imports.d.ts
+      - git add {{.COMMIT_FILES}}
       - |
         git commit -m "build(deps): update {{.PACKAGE_NAME}} to version {{.PACKAGE_VERSION}}"
       - task: 'git:push-current'
