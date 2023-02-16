@@ -2439,17 +2439,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-git@npm:^2.0.0-beta.48":
-  version: 2.0.0-beta.50-pre.1
-  resolution: "@vuepress/plugin-git@npm:2.0.0-beta.50-pre.1"
-  dependencies:
-    "@vuepress/core": 2.0.0-beta.50-pre.1
-    "@vuepress/utils": 2.0.0-beta.50-pre.1
-    execa: ^6.1.0
-  checksum: 4021a699b0da24c189d620abb9038d608c3e2cd75e88f1d686ac5417c42ed07afda98da65980662e9d28270fcc1af2db46e5bef5c902d6e95fce3c6d85455a50
-  languageName: node
-  linkType: hard
-
 "@vuepress/plugin-google-analytics@npm:^2.0.0-beta.48":
   version: 2.0.0-beta.50-pre.1
   resolution: "@vuepress/plugin-google-analytics@npm:2.0.0-beta.50-pre.1"
@@ -2845,7 +2834,7 @@ __metadata:
   resolution: "awesome-nuxt@workspace:."
   dependencies:
     "@vuepress/plugin-docsearch": ^2.0.0-beta.60
-    "@vuepress/plugin-git": ^2.0.0-beta.48
+    "@vuepress/plugin-git": ^2.0.0-beta.60
     "@vuepress/plugin-google-analytics": ^2.0.0-beta.48
     "@vuepress/plugin-pwa": ^2.0.0-beta.48
     markdownlint-cli2: ^0.6.0
