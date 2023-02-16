@@ -51,7 +51,7 @@ jobs:
           GA_ID: ${{ secrets.GA_ID }}
         run: pnpm run build
 
-      - name: Deploy to GutHub Pages
+      - name: Deploy to GitHub Pages
         if: github.ref_name == 'main' && success()
         uses: crazy-max/ghaction-github-pages@v3
         with:
