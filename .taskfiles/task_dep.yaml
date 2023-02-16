@@ -1,0 +1,52 @@
+version: "3"
+
+vars:
+  GIT_REMOTE: origin
+  BRANCH_BASE: develop
+  BRANCH_DEP_PREFIX: deps
+  COMMIT_FILES: package.json pnpm-lock.yaml
+
+includes:
+  site:
+    taskfile: ./task_site.yaml
+    internal: true
+  git:
+    taskfile: ./task_git.yaml
+    internal: true
+  github:
+    taskfile: ./task_github.yaml
+    internal: true
+
+tasks:
+  init-dep-branch:
+    desc: Init git branch {{.BRANCH_DEP_PREFIX}}/*
+    cmds:
+      - git pull {{.GIT_REMOTE}} {{.BRANCH_BASE}}:{{.BRANCH_BASE}}
+      - git switch {{.BRANCH_DEP_PREFIX}}/{{.BRANCH_NAME}} {{.BRANCH_BASE}} 2>/dev/null || git switch -c {{.BRANCH_DEP_PREFIX}}/{{.BRANCH_NAME}} {{.BRANCH_BASE}}
+    silent: true
+
+  update:
+    desc: Check whether the new version of the npm package broke the build.
+    cmds:
+      - task: init-dep-branch
+        vars:
+          BRANCH_NAME: '{{.CLI_ARGS}}'
+      - ncu -u -f {{.CLI_ARGS}}
+      - task: 'site:build'
+      - task: commit
+        vars:
+          PACKAGE_NAME: '{{.CLI_ARGS}}'
+    silent: true
+
+  commit:
+    desc: Commit changes after updating package version
+    vars:
+      PACKAGE_VERSION:
+        sh: npm view {{.PACKAGE_NAME}} version
+    cmds:
+      - git add {{.COMMIT_FILES}}
+      - |
+        git commit -m "build(deps): update {{.PACKAGE_NAME}} to version {{.PACKAGE_VERSION}}"
+      - task: 'git:push-current'
+      - task: 'github:create-pr-current'
+    silent: true

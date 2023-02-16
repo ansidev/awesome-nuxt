@@ -1,6 +1,6 @@
 {
   "name": "awesome-nuxt",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "🎉 A curated list of awesome things related to Nuxt.js",
   "private": true,
   "repository": {
@@ -27,16 +27,26 @@
   "scripts": {
     "dev": "vuepress dev content",
     "build": "vuepress build content",
-    "lint": "markdownlint . -i node_modules",
-    "test": "yarn lint"
+    "lint": "markdownlint-cli2 ./content/**/*.md ",
+    "test": "pnpm lint"
   },
   "devDependencies": {
-    "@vuepress/plugin-docsearch": "^2.0.0-beta.48",
-    "@vuepress/plugin-git": "^2.0.0-beta.48",
-    "@vuepress/plugin-google-analytics": "^2.0.0-beta.48",
-    "@vuepress/plugin-pwa": "^2.0.0-beta.48",
-    "markdownlint-cli": "^0.32.2",
-    "vuepress": "^2.0.0-beta.48"
+    "@vuepress/client": "^2.0.0-beta.60",
+    "@vuepress/plugin-docsearch": "^2.0.0-beta.60",
+    "@vuepress/plugin-git": "^2.0.0-beta.60",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.60",
+    "@vuepress/plugin-pwa": "^2.0.0-beta.60",
+    "markdownlint-cli2": "^0.6.0",
+    "vue": "^3.2.47",
+    "vuepress": "^2.0.0-beta.60"
   },
-  "packageManager": "yarn@3.2.2"
+  "resolutions": {
+    "@vuepress/client": "2.0.0-beta.60",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.60",
+    "@vuepress/plugin-git": "2.0.0-beta.60",
+    "@vuepress/plugin-google-analytics": "2.0.0-beta.60",
+    "@vuepress/plugin-pwa": "2.0.0-beta.60",
+    "vuepress": "2.0.0-beta.60"
+  },
+  "packageManager": "pnpm@7.27.0"
 }

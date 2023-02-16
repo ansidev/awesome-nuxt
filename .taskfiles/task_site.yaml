@@ -1,0 +1,28 @@
+version: "3"
+
+env:
+  PACKAGE_MANAGER: pnpm
+
+vars:
+  OUTPUT_DIR: content/.vuepress/dist
+
+tasks:
+  install:
+    desc: Install dependencies
+    cmds:
+      - ${PACKAGE_MANAGER} install
+    silent: true
+
+  build:
+    desc: Build site
+    cmds:
+      - task: clean
+      - task: install
+      - ${PACKAGE_MANAGER} run build
+
+  clean:
+    desc: Clean the build output
+    cmds:
+      - rm -r {{.OUTPUT_DIR}}
+    silent: true
+    ignore_error: true
