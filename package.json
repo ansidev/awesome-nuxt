@@ -44,9 +44,9 @@
     "@vuepress/client": "2.0.0-beta.60",
     "@vuepress/plugin-docsearch": "2.0.0-beta.60",
     "@vuepress/plugin-git": "2.0.0-beta.60",
-    "@vuepress/plugin-google-analytics": "2.0.0-beta.60",
-    "@vuepress/plugin-pwa": "2.0.0-beta.60",
-    "vuepress": "2.0.0-beta.60"
+    "@vuepress/plugin-google-analytics": "2.0.0-beta.50-pre.1",
+    "@vuepress/plugin-pwa": "2.0.0-beta.50-pre.1",
+    "vuepress": "2.0.0-beta.50-pre.1"
   },
   "packageManager": "pnpm@7.27.0"
 }
