@@ -1,0 +1,39 @@
+version: "3"
+
+includes:
+  site:
+    taskfile: ./task_site.yaml
+    internal: true
+  git:
+    taskfile: ./task_git.yaml
+    internal: true
+  github:
+    taskfile: ./task_github.yaml
+    internal: true
+
+tasks:
+  update-dep:
+    desc: Check whether the new version of the npm package broke the build.
+    cmds:
+      - task: init-dep-branch
+        vars:
+          BRANCH_NAME: '{{.CLI_ARGS}}'
+      - ncu -u -f {{.CLI_ARGS}}
+      - task: 'site:build'
+      - task: commit-dep-changes
+        vars:
+          PACKAGE_NAME: '{{.CLI_ARGS}}'
+    silent: true
+
+  commit-dep-changes:
+    desc: Commit changes after updating package version
+    vars:
+      PACKAGE_VERSION:
+        sh: npm view {{.PACKAGE_NAME}} version
+    cmds:
+      - git add package.json pnpm-lock.yaml src/auto-imports.d.ts
+      - |
+        git commit -m "build(deps): update {{.PACKAGE_NAME}} to version {{.PACKAGE_VERSION}}"
+      - task: 'git:push-current'
+      - task: 'github:create-pr-current'
+    silent: true

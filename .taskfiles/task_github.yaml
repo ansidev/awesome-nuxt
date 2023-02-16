@@ -1,0 +1,23 @@
+version: "3"
+
+tasks:
+  create-pr:
+    desc: Create GitHub pull request
+    vars:
+      PR_TITLE:
+        sh: git log {{.BASE}}..{{.HEAD}} --pretty=format:%s | tail -1
+    cmds:
+      - gh pr create --base "{{.BASE}}" --head "{{.HEAD}}" --title "{{.PR_TITLE}}" --fill
+    silent: true
+
+  create-pr-current:
+    desc: Create GitHub pull request for the current git branch
+    vars:
+      BRANCH_NAME:
+        sh: git branch --show
+    cmds:
+      - task: create-pr
+        vars:
+          BASE: 'main'
+          HEAD: '{{.BRANCH_NAME}}'
+    silent: true

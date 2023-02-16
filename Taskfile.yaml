@@ -1,63 +1,7 @@
-# https://taskfile.dev
-
 version: "3"
 
-env:
-  TAG_PREFIX: v
-  CHANGES_DIR: .changes
-
-vars:
-  VERSION_FILE: package.json
-
-tasks:
-  prepare:
-    desc: Install tools
-    cmds:
-      - go install github.com/git-chglog/git-chglog/cmd/git-chglog@latest
-      - go install github.com/miniscruff/changie@latest
-
-  batch-changelog:
-    desc: Generate changelog for existing git tags
-    cmds:
-      - rm ${CHANGES_DIR}/${TAG_PREFIX}*.md || true
-      - for VERSION_TAG in $(git -c 'versionsort.suffix=-' tag --list --sort=v:refname); do git-chglog --output ${CHANGES_DIR}/${VERSION_TAG}.md ${VERSION_TAG} ; done
-    silent: true
-
-  changelog:
-    desc: Generate changelog for an existing version
-    vars:
-      VERSION_TAG: ${TAG_PREFIX}{{.CLI_ARGS}}
-    cmds:
-      - git-chglog --output ${CHANGES_DIR}/{{.VERSION_TAG}}.md {{.VERSION_TAG}}
-    silent: true
-
-  changelog-next:
-    desc: Generate changelog for a new version
-    vars:
-      VERSION_TAG: ${TAG_PREFIX}{{.CLI_ARGS}}
-    cmds:
-      - git-chglog --output ${CHANGES_DIR}/{{.VERSION_TAG}}.md --next-tag {{.VERSION_TAG}} {{.VERSION_TAG}}
-    silent: true
-
-  commit-release:
-    desc: Create release commit
-    vars:
-      VERSION_TAG: ${TAG_PREFIX}{{.CLI_ARGS}}
-    cmds:
-      - git add ${CHANGES_DIR}
-      - git add CHANGELOG.md
-      - git add {{.VERSION_FILE}}
-      - |
-        git commit -m "chore(release): {{.VERSION_TAG}}"
-    silent: true
-
-  release:
-    desc: Generate release commit
-    vars:
-      VERSION_TAG: ${TAG_PREFIX}{{.CLI_ARGS}}
-    cmds:
-      - echo "Releasing version {{.VERSION_TAG}}"
-      - task changelog-next -- {{.CLI_ARGS}}
-      - changie merge
-      - task commit-release -- {{.CLI_ARGS}}
-    silent: true
+includes:
+  site: ./.taskfiles/task_site.yaml
+  git: ./.taskfiles/task_git.yaml
+  release: ./.taskfiles/task_release.yaml
+  dep: ./.taskfiles/task_dep.yaml
