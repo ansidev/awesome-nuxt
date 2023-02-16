@@ -1,5 +1,10 @@
 version: "3"
 
+vars:
+  GIT_REMOTE: origin
+  BRANCH_BASE: develop
+  BRANCH_DEP_PREFIX: deps
+
 includes:
   site:
     taskfile: ./task_site.yaml
@@ -12,7 +17,14 @@ includes:
     internal: true
 
 tasks:
-  update-dep:
+  init-dep-branch:
+    desc: Init git branch {{.BRANCH_DEP_PREFIX}}/*
+    cmds:
+      - git pull {{.GIT_REMOTE}} {{.BRANCH_BASE}}:{{.BRANCH_BASE}}
+      - git switch {{.BRANCH_DEP_PREFIX}}/{{.BRANCH_NAME}} {{.BRANCH_BASE}} 2>/dev/null || git switch -c {{.BRANCH_DEP_PREFIX}}/{{.BRANCH_NAME}} {{.BRANCH_BASE}}
+    silent: true
+
+  update:
     desc: Check whether the new version of the npm package broke the build.
     cmds:
       - task: init-dep-branch
@@ -20,12 +32,12 @@ tasks:
           BRANCH_NAME: '{{.CLI_ARGS}}'
       - ncu -u -f {{.CLI_ARGS}}
       - task: 'site:build'
-      - task: commit-dep-changes
+      - task: commit
         vars:
           PACKAGE_NAME: '{{.CLI_ARGS}}'
     silent: true
 
-  commit-dep-changes:
+  commit:
     desc: Commit changes after updating package version
     vars:
       PACKAGE_VERSION:
