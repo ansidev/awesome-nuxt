@@ -1,7 +1,7 @@
 name: deploy
 
 on:
-  push:
+  pull_request:
     branches:
       - main
       - develop
@@ -51,8 +51,12 @@ jobs:
           GA_ID: ${{ secrets.GA_ID }}
         run: pnpm run build
 
+      - name: Ignore deployment
+        if: github.base_ref == 'develop' && success()
+        run: echo "Current branch is {{ github.base_ref }}. Deployment was ignored"
+
       - name: Deploy to GitHub Pages
-        if: github.ref_name == 'main' && success()
+        if: github.base_ref == 'main' && success()
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target-branch: gh-pages
