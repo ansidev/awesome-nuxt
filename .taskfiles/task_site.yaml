@@ -3,6 +3,9 @@ version: "3"
 env:
   PACKAGE_MANAGER: yarn
 
+vars:
+  OUTPUT_DIR: content/.vuepress/dist
+
 tasks:
   install:
     desc: Install dependencies
@@ -20,6 +23,6 @@ tasks:
   clean:
     desc: Clean the build output
     cmds:
-      - rm -r dist
+      - rm -r {{.OUTPUT_DIR}}
     silent: true
     ignore_error: true
