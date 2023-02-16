@@ -1,0 +1,11 @@
+version: "3"
+
+tasks:
+  push-current:
+    desc: Push current branch
+    vars:
+      BRANCH_NAME:
+        sh: git branch --show
+    cmds:
+      - git push -u origin {{.BRANCH_NAME}}
+    silent: true
