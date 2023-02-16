@@ -1,0 +1,86 @@
+name: draft_release_hotfix_pr
+
+on:
+  push:
+    branches:
+      - "release/**"
+      - "hotfix/**"
+
+env:
+  BRANCH_MAIN: main
+  BRANCH_DEVELOP: develop
+  TAG_PREFIX: v
+
+jobs:
+  create_draft_pr:
+    name: Create draft PR
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    # only create draft pull requests on pushing to branches 'release/' or 'hotfix/'
+    if: (startsWith(github.ref_name, 'release/') || startsWith(github.ref_name, 'hotfix/'))
+
+    steps:
+      - name: Set GitHub token
+        run: |
+          echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" >> $GITHUB_ENV
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref_name }}
+          token: ${{ env.GH_TOKEN }}
+          # needed by "gh pr create"
+          fetch-depth: 0
+
+      - name: Set environment variables for publishing release
+        if: startsWith(github.ref_name, 'release/')
+        run: |
+          BRANCH_NAME="${{ github.ref_name }}"
+          VERSION=${BRANCH_NAME#release/}
+          echo "RELEASE_VERSION=$VERSION" >> $GITHUB_ENV
+          echo "RELEASE_TYPE=release" >> $GITHUB_ENV
+
+      - name: Set environment variables for publishing hotfix
+        if: startsWith(github.ref_name, 'hotfix/')
+        run: |
+          BRANCH_NAME="${{ github.ref_name }}"
+          VERSION=${BRANCH_NAME#hotfix/}
+          echo "RELEASE_VERSION=$VERSION" >> $GITHUB_ENV
+          echo "RELEASE_TYPE=hotfix" >> $GITHUB_ENV
+
+      - name: Check whether pre-release version
+        if: contains(env.RELEASE_VERSION, 'alpha') || contains(env.RELEASE_VERSION, 'beta') || contains(env.RELEASE_VERSION, 'rc')
+        run: |
+          echo "PRE_RELEASE=true" >> $GITHUB_ENV
+
+      - name: Set PR title
+        run: |
+          RELEASE_TYPE=${{ env.RELEASE_TYPE }}
+          PR_PREFIX=${RELEASE_TYPE^}
+          PR_TITLE="${PR_PREFIX} ${{ env.TAG_PREFIX }}${{ env.RELEASE_VERSION }}"
+          echo "PR_TITLE=$PR_TITLE" >> $GITHUB_ENV
+
+      - name: Create PR '${{ env.PR_TITLE }}'
+        env:
+          PR_BODY: |
+            This PR was created to prepare for releasing ${{ env.TAG_PREFIX }}${{ env.RELEASE_VERSION }}.
+
+            Merging this PR will create the GitHub release ${{ env.TAG_PREFIX }}${{ env.RELEASE_VERSION }}.
+        run: |
+          PR_LABELS="automated-pr,${RELEASE_TYPE}-pr"
+
+          [[ ${PRE_RELEASE:-false} == "true" ]] && gh label create 'pre-release' --force && PR_LABELS="$PR_LABELS,pre-release"
+
+          for LABEL in $(echo $PR_LABELS | sed "s/,/ /g"); do gh label create $LABEL --force; done
+
+          PR_ID=$(gh pr list --state open --search "base:${{ env.BRANCH_MAIN }} head:${{ github.ref_name }}" | head -1 | cut -f1)
+          [[ ! -z "$PR_ID" ]] && echo "PR was created with ID $PR_ID. Ignored!" || \
+            gh pr create \
+              --draft \
+              --base "${{ env.BRANCH_MAIN }}" \
+              --head "${{ github.ref_name }}" \
+              --title "${{ env.PR_TITLE }}" \
+              --body "${{ env.PR_BODY }}" \
+              --label "${PR_LABELS}" \
+              --fill

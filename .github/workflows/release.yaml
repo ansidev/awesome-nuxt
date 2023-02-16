@@ -1,0 +1,86 @@
+name: release
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+
+env:
+  BRANCH_MAIN: main
+  BRANCH_DEVELOP: develop
+  TAG_PREFIX: v
+  CHANGELOG_DIR: .changes
+
+jobs:
+  release:
+    name: Publish new release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    # only merge pull requests that begin with 'release/' or 'hotfix/'
+    if: github.event.pull_request.merged == true &&
+      (startsWith(github.head_ref, 'release/') || startsWith(github.head_ref, 'hotfix/'))
+
+    steps:
+      - name: Set GitHub token
+        run: |
+          echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" >> $GITHUB_ENV
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ env.GH_TOKEN }}
+          # needed by "gh pr create"
+          fetch-depth: 0
+
+      - name: Extract version from release branch
+        if: startsWith(github.head_ref, 'release/')
+        run: |
+          BRANCH_NAME="${{ github.head_ref }}"
+          VERSION=${BRANCH_NAME#release/}
+          echo "RELEASE_VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Extract version from hotfix branch
+        if: startsWith(github.head_ref, 'hotfix/')
+        run: |
+          BRANCH_NAME="${{ github.head_ref }}"
+          VERSION=${BRANCH_NAME#hotfix/}
+          echo "RELEASE_VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Check whether pre-release version
+        if: contains(env.RELEASE_VERSION, 'alpha') || contains(env.RELEASE_VERSION, 'beta') || contains(env.RELEASE_VERSION, 'rc')
+        run: |
+          echo "PRE_RELEASE=true" >> $GITHUB_ENV
+
+      - name: Create release
+        env:
+          RELEASE_TAG: "${{ env.TAG_PREFIX }}${{ env.RELEASE_VERSION }}"
+        run: |
+          gh release create \
+            ${{ env.RELEASE_TAG }} \
+            --target ${{ github.event.pull_request.merge_commit_sha }} \
+            --title "${{ env.RELEASE_TAG }}" \
+            --notes-file "${{ env.CHANGELOG_DIR }}/${{ env.RELEASE_TAG }}.md" \
+            --prerelease=${PRE_RELEASE:-false}
+
+      - name: Create PR ${{ github.head_ref }} -> ${{ env.BRANCH_DEVELOP }} and merge automatically
+        env:
+          PR_TITLE: Merge branch '${{ github.head_ref }}' into ${{ env.BRANCH_DEVELOP }}
+          PR_BODY: |
+            This PR merges the branch '${{ github.head_ref }}' back into the branch '${{ env.BRANCH_DEVELOP }}'.
+
+            This ensures that the updates on the branch '${{ github.head_ref }}', i.e. CHANGELOG and manifest updates, are also present on the branch '${{ env.BRANCH_DEVELOP }}'.
+          PR_LABEL: automated-pr
+        run: |
+          gh label create ${{ env.PR_LABEL }} --force
+
+          gh pr create \
+            --base ${{ env.BRANCH_DEVELOP }} \
+            --head ${{ github.head_ref }} \
+            --title "${{ env.PR_TITLE }}" \
+            --body "${{ env.PR_BODY }}" \
+            --label "${{ env.PR_LABEL }}" \
+            --fill
