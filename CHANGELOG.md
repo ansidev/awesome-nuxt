@@ -4,7 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [v2.0.0](https://github.com/ansidev/sample-gitflow-release-workflows/compare/v1.0.0...v2.0.0) (2023-02-16)
+## [v2.0.1](https://github.com/ansidev/awesome-nuxt/compare/v2.0.0...v2.0.1) (2023-02-16)
+
+### Bug Fixes
+
+- **changelog:** correct repository URL
+
+- **github-actions:** split build and deploy into two workflows
+
+Full Changelog: [v2.0.0...v2.0.1](https://github.com/ansidev/awesome-nuxt/compare/v2.0.0...v2.0.1)
+
+## [v2.0.0](https://github.com/ansidev/awesome-nuxt/compare/v1.0.0...v2.0.0) (2023-02-16)
 
 ### Features
 
@@ -17,7 +27,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 - **Dependency:** Migrate from [markdownlint](https://github.com/DavidAnson/markdownlint) to [markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2)
 
-Full Changelog: [v1.0.0...v2.0.0](https://github.com/ansidev/sample-gitflow-release-workflows/compare/v1.0.0...v2.0.0)
+Full Changelog: [v1.0.0...v2.0.0](https://github.com/ansidev/awesome-nuxt/compare/v1.0.0...v2.0.0)
 
 ## v1.0.0 (2023-02-16)
 
@@ -30,4 +40,4 @@ Full Changelog: [v1.0.0...v2.0.0](https://github.com/ansidev/sample-gitflow-rele
 - **Release:** GitHub Actions + Gitflow.
 - **Deployment:** GitHub Pages + Netlify.
 
-Full Changelog: [v1.0.0](https://github.com/ansidev/sample-gitflow-release-workflows/commits/v1.0.0)
+Full Changelog: [v1.0.0](https://github.com/ansidev/awesome-nuxt/commits/v1.0.0)
