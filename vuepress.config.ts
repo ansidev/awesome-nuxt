@@ -1,7 +1,7 @@
-const { defaultTheme } = require('vuepress')
-const { docsearchPlugin } = require('@vuepress/plugin-docsearch')
-const { googleAnalyticsPlugin } = require('@vuepress/plugin-google-analytics')
-const { pwaPlugin } = require('@vuepress/plugin-pwa')
+import { defaultTheme } from 'vuepress'
+import { docsearchPlugin } from '@vuepress/plugin-docsearch'
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+import { pwaPlugin } from '@vuepress/plugin-pwa'
 
 const isProd = process.env.NODE_ENV === "production"
 
@@ -62,29 +62,31 @@ module.exports = {
   base: "/",
   theme: defaultTheme({
     repo: "ansidev/awesome-nuxt",
-    editLinks: true,
-    lastUpdated: "Last Updated",
-    sidebar: [{
-      title: "Resources",
-      collapsable: false,
-      children: [
-        "/resources/official-resources",
-        "/resources/community",
-        "/resources/modules",
-        "/resources/tools",
-        "/resources/mention-of-nuxt",
-        "/resources/tutorials",
-        "/resources/blogs",
-        "/resources/books",
-        "/resources/starter-template",
-        "/resources/docker",
-        "/resources/official-examples",
-        "/resources/community-examples",
-        "/resources/open-source-projects-using-nuxt",
-        "/resources/projects-using-nuxt",
-        "/resources/showcase",
-      ],
-    }, ],
+    editLink: true,
+    lastUpdatedText: "Last Updated",
+    sidebar: [
+      {
+        text: "Resources",
+        collapsible: false,
+        children: [
+          "/resources/official-resources",
+          "/resources/community",
+          "/resources/modules",
+          "/resources/tools",
+          "/resources/mention-of-nuxt",
+          "/resources/tutorials",
+          "/resources/blogs",
+          "/resources/books",
+          "/resources/starter-template",
+          "/resources/docker",
+          "/resources/official-examples",
+          "/resources/community-examples",
+          "/resources/open-source-projects-using-nuxt",
+          "/resources/projects-using-nuxt",
+          "/resources/showcase",
+        ],
+      }
+    ],
     themePlugins: {
       // only enable git plugin in production mode
       git: isProd,
@@ -92,12 +94,12 @@ module.exports = {
   }),
   plugins: [
     docsearchPlugin({
-      appId: process.env.DOCSEARCH_APP_ID,
-      apiKey: process.env.DOCSEARCH_API_KEY,
-      indexName: process.env.DOCSEARCH_INDEX_NAME
+      appId: process.env.DOCSEARCH_APP_ID!,
+      apiKey: process.env.DOCSEARCH_API_KEY!,
+      indexName: process.env.DOCSEARCH_INDEX_NAME!
     }),
     googleAnalyticsPlugin({
-      id: process.env.GA_ID
+      id: process.env.GA_ID!
     }),
     pwaPlugin({
       skipWaiting: true
