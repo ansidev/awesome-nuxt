@@ -53,7 +53,7 @@ jobs:
 
       - name: Ignore deployment
         if: github.base_ref == 'develop' && success()
-        run: echo "Current branch is {{ github.base_ref }}. Deployment was ignored"
+        run: echo "Current branch is ${{ github.base_ref }}. Deployment was ignored"
 
       - name: Deploy to GitHub Pages
         if: github.base_ref == 'main' && success()
