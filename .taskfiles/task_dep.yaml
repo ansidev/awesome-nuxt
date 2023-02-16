@@ -4,7 +4,7 @@ vars:
   GIT_REMOTE: origin
   BRANCH_BASE: develop
   BRANCH_DEP_PREFIX: deps
-  COMMIT_FILES: package.json yarn.lock
+  COMMIT_FILES: package.json pnpm-lock.yaml
 
 includes:
   site:
