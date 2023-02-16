@@ -6,6 +6,9 @@ env:
   TAG_PREFIX: v
   CHANGES_DIR: .changes
 
+vars:
+  VERSION_FILE: package.json
+
 tasks:
   prepare:
     desc: Install tools
@@ -36,12 +39,6 @@ tasks:
       - git-chglog --output ${CHANGES_DIR}/{{.VERSION_TAG}}.md --next-tag {{.VERSION_TAG}} {{.VERSION_TAG}}
     silent: true
 
-  bump-version:
-    desc: Bump version
-    cmds:
-      - echo {{.CLI_ARGS}} > VERSION
-    silent: true
-
   commit-release:
     desc: Create release commit
     vars:
@@ -49,7 +46,7 @@ tasks:
     cmds:
       - git add ${CHANGES_DIR}
       - git add CHANGELOG.md
-      - git add VERSION
+      - git add {{.VERSION_FILE}}
       - |
         git commit -m "chore(release): {{.VERSION_TAG}}"
     silent: true
@@ -61,7 +58,6 @@ tasks:
     cmds:
       - echo "Releasing version {{.VERSION_TAG}}"
       - task changelog-next -- {{.CLI_ARGS}}
-      - task bump-version -- {{.CLI_ARGS}}
       - changie merge
       - task commit-release -- {{.CLI_ARGS}}
     silent: true
