@@ -1,7 +1,7 @@
 version: "3"
 
 tasks:
-  push-current:
+  push_current:
     desc: Push current branch
     vars:
       BRANCH_NAME:
