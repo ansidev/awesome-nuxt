@@ -16,7 +16,7 @@ tasks:
       - go install github.com/git-chglog/git-chglog/cmd/git-chglog@latest
       - go install github.com/miniscruff/changie@latest
 
-  batch-changelog:
+  batch_changelog:
     desc: Generate changelog for existing git tags
     cmds:
       - rm ${CHANGES_DIR}/${TAG_PREFIX}*.md || true
@@ -31,7 +31,7 @@ tasks:
       - git-chglog --output ${CHANGES_DIR}/{{.VERSION_TAG}}.md {{.VERSION_TAG}}
     silent: true
 
-  changelog-next:
+  changelog_next:
     desc: Generate changelog for a new version
     vars:
       VERSION_TAG: ${TAG_PREFIX}{{.CLI_ARGS}}
@@ -39,7 +39,7 @@ tasks:
       - git-chglog --output ${CHANGES_DIR}/{{.VERSION_TAG}}.md --next-tag {{.VERSION_TAG}} {{.VERSION_TAG}}
     silent: true
 
-  commit-release:
+  commit_release:
     desc: Create release commit
     vars:
       VERSION_TAG: ${TAG_PREFIX}{{.CLI_ARGS}}
@@ -51,13 +51,13 @@ tasks:
         git commit -m "chore(release): {{.VERSION_TAG}}"
     silent: true
 
-  release:
+  create:
     desc: Generate release commit
     vars:
       VERSION_TAG: ${TAG_PREFIX}{{.CLI_ARGS}}
     cmds:
       - echo "Releasing version {{.VERSION_TAG}}"
-      - task release:changelog-next -- {{.CLI_ARGS}}
+      - task release:changelog_next -- {{.CLI_ARGS}}
       - changie merge
-      - task release:commit-release -- {{.CLI_ARGS}}
+      - task release:commit_release -- {{.CLI_ARGS}}
     silent: true
