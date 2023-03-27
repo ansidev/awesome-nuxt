@@ -1,9 +1,9 @@
-# Awesome Nuxt.js [![Build Status][badge]][ci]
+# Awesome Nuxt
 
-[badge]: https://travis-ci.org/ansidev/awesome-nuxt.svg?branch=master
-[ci]: https://travis-ci.org/ansidev/awesome-nuxt
+[![Release](https://img.shields.io/github/release/ansidev/awesome-nuxt.svg)](https://github.com/ansidev/awesome-nuxt/releases)
+[![Deployment Status](https://github.com/ansidev/awesome-nuxt/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/ansidev/awesome-nuxt/actions/workflows/pages/pages-build-deployment)
 
-> A curated list of awesome things related to Nuxt.js
+**A curated list of awesome things related to Nuxt**
 
 This project does not aim to replace the [Community Nuxt.js Awesome List](https://github.com/nuxt-community/awesome-nuxt) but rather to provide a nicer experience when browsing the content.
 
@@ -40,7 +40,7 @@ serve .
 ## Scripts
 
 | Script  | Description                                             |
-|---------|---------------------------------------------------------|
+| ------- | ------------------------------------------------------- |
 | `dev`   | Compiles content and serves bundled code                |
 | `build` | Compiles content and other static assets for deployment |
 | `lint`  | Runs markdown linter to check lint errors               |
@@ -50,8 +50,10 @@ serve .
 
 Please refer to the [Contributing Guide](.github/CONTRIBUTING.md).
 
+## Contact
+
+Le Minh Tri [@ansidev](https://ansidev.xyz/about).
+
 ## License
 
-This is free and unencumbered software released into the public domain.
-
-For more information, please refer to <https://opensource.org/licenses/MIT>
+This source code is available under the [MIT License](/LICENSE).
