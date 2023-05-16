@@ -161,7 +161,7 @@
 - [Storefront UI Module](https://www.npmjs.com/package/@storefront-ui/nuxt) - [Storefront UI](https://www.storefrontui.io/)
 - [nuxt-change-case](https://github.com/RadKod/nuxt-change-case) - change-case integration as nuxt module.
 - [nuxt-html2canvas-proxy](https://github.com/ChangJoo-Park/nuxt-html2canvas-proxy) - Provide html2canvas-proxy for Nuxt.js.
-- [vue-persian-datepicker](https://github.com/alireza-ab/vue-persian-datepicker) - A datepicker component for select date. [[example]](https://alireza-ab.ir/datepicker) **(single and range selection, select date and time, select with keyboard, customizable style, localization)**
+- [vue-persian-datepicker](https://github.com/alireza-ab/vue-persian-datepicker) - A datepicker component for select date. [example](https://alireza-ab.ir/datepicker) **(single and range selection, select date and time, select with keyboard, customizable style, localization)**
 - [nuxt-assets-paths](https://github.com/victorgarciaesgi/nuxt-assets-paths) - Autocomplete for nuxt assets, icons and images paths
 - [nuxt-headway](https://github.com/l-portet/nuxt-headway) - Integrate the Headway changelog widget into your app.
 - [nuxt-jsonapi](https://github.com/patrickcate/nuxt-jsonapi) - Adds easy JSON:API client integration to Nuxt.
