@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v2.0.5](https://github.com/ansidev/awesome-nuxt/compare/v2.0.4...v2.0.5) (2023-05-16)
+
+### Content
+
+- [ADDED] New open-source website: https://vue-ecom.vercel.app/
+
+### Bug Fixes
+
+- **syntax:** correct Markdown syntax
+
+### Dependencies
+
+| Package             | Version                 |
+| ------------------- | ----------------------- |
+| `markdownlint-cli2` | `^0.6.0` `->` `^0.7.1`  |
+| `vue`               | `^3.2.47` `->` `^3.3.2` |
+| `pnpm`              | `^8.1.0` `->` `^8.5.1`  |
+
+Full Changelog: [v2.0.4...v2.0.5](https://github.com/ansidev/awesome-nuxt/compare/v2.0.4...v2.0.5)
+
 ## [v2.0.4](https://github.com/ansidev/awesome-nuxt/compare/v2.0.3...v2.0.4) (2023-03-30)
 
 ### Documentation
