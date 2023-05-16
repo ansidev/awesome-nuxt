@@ -9,6 +9,7 @@
 | Name | Description | Repository |
 |---|---|---|
 | [CSS Gradient Text](https://cssgradienttext.com/) | CSS gradient text - Free online gradient text generator | [github](https://github.com/KareemDa/gradient-text) |
+| [V-Store](https://vue-ecom.vercel.app/) | Beautiful Open source StoreFront template built with Nuxt3. | [github](https://github.com/rash0/Vue-Ecom) |
 
 ![Nuxt v2][nuxt-v2-label]
 
