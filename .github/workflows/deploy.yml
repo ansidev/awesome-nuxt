@@ -12,45 +12,17 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v2.2.4
-        with:
-          version: "7.x"
-          run_install: false
-
-      - name: Get PNPM store directory
-        id: pnpm-cache
-        run: echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - name: Setup pnpm cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Lint Markdown content
-        run: pnpm run lint
-
       - name: Build site
+        uses: ghacts/static-site@main
         env:
           DOCSEARCH_APP_ID: ${{ secrets.DOCSEARCH_APP_ID }}
           DOCSEARCH_API_KEY: ${{ secrets.DOCSEARCH_API_KEY }}
           DOCSEARCH_INDEX_NAME: ${{ secrets.DOCSEARCH_INDEX_NAME }}
           GA_ID: ${{ secrets.GA_ID }}
-        run: pnpm run build
+        with:
+          node-version: 18
+          skip-test: true
+          output-dir: content/.vuepress/dist
 
       - name: Deploy to GitHub Pages
         if: success()
