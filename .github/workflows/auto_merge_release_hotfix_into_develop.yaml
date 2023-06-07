@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Set GitHub token
         run: |
-          echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" >> $GITHUB_ENV
+          echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" >> "$GITHUB_ENV"
 
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -37,4 +37,4 @@ jobs:
           PR_NUMBER: ${{ github.event.number }}
           PR_TITLE: Merge branch '${{ github.head_ref }}' into ${{ env.BRANCH_DEVELOP }}
         run: |
-          gh pr merge ${PR_NUMBER} -m -d -t "${PR_TITLE}"
+          gh pr merge "${PR_NUMBER}" -m -d -t "${PR_TITLE}"
