@@ -1,6 +1,6 @@
 {
   "name": "awesome-nuxt",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "🎉 A curated list of awesome things related to Nuxt.js",
   "private": true,
   "repository": {
@@ -48,5 +48,5 @@
     "@vuepress/plugin-pwa": "2.0.0-beta.60",
     "vuepress": "2.0.0-beta.60"
   },
-  "packageManager": "pnpm@8.5.1"
+  "packageManager": "pnpm@8.6.1"
 }

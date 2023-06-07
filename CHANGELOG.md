@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v2.0.6](https://github.com/ansidev/awesome-nuxt/compare/v2.0.5...v2.0.6) (2023-06-07)
+
+### Bug Fixes
+
+- **action:** apply reusable GitHub Actions for building and deploying site
+
+- **action:** fix actionlint reports
+
+### Others
+
+- **deps:** update `pnpm` to `v8.6.1`
+
+Full Changelog: [v2.0.5...v2.0.6](https://github.com/ansidev/awesome-nuxt/compare/v2.0.5...v2.0.6)
+
 ## [v2.0.5](https://github.com/ansidev/awesome-nuxt/compare/v2.0.4...v2.0.5) (2023-05-16)
 
 ### Content
