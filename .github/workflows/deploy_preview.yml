@@ -14,9 +14,7 @@ env:
 
 jobs:
   build:
-    if: |
-      github.event.pull_request.merged == true &&
-      github.event.pull_request.mergeable_state == 'clean'
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     environment:
       name: preview
