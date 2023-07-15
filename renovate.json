@@ -5,5 +5,22 @@
   ],
   "baseBranches": [
     "develop"
+  ],
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "rangeStrategy": "bump"
+    },
+    {
+      "groupName": "vuepress",
+      "matchPackageNames": [
+        "vuepress"
+      ],
+      "matchPackagePrefixes": [
+        "@vuepress/"
+      ]
+    }
   ]
 }
