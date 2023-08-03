@@ -1815,14 +1815,14 @@ packages:
     resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==}
     dev: true
 
-  /@vitejs/plugin-vue@4.0.0(vite@4.0.4)(vue@3.3.2):
+  /@vitejs/plugin-vue@4.0.0(vite@4.0.5)(vue@3.3.2):
     resolution: {integrity: sha512-e0X4jErIxAB5oLtDqbHvHpJe/uWNkdpYV83AOG2xo2tEVSzCzewgJMtREZM30wXnM5ls90hxiOtAuVU6H5JgbA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.0.4
+      vite: 4.0.5
       vue: 3.3.2
     dev: true
 
@@ -1920,7 +1920,7 @@ packages:
   /@vuepress/bundler-vite@2.0.0-beta.60:
     resolution: {integrity: sha512-nf+UAKNlAEZXZqu2Ztvr8Hg/5CtevWxvQGfYKV4lhw8UmoDjKKHoHPpPhF1QTUbnZ8W+jPLzIVz+hjunzsxl/A==}
     dependencies:
-      '@vitejs/plugin-vue': 4.0.0(vite@4.0.4)(vue@3.3.2)
+      '@vitejs/plugin-vue': 4.0.0(vite@4.0.5)(vue@3.3.2)
       '@vuepress/client': 2.0.0-beta.60
       '@vuepress/core': 2.0.0-beta.60
       '@vuepress/shared': 2.0.0-beta.60
@@ -1930,7 +1930,7 @@ packages:
       postcss: 8.4.21
       postcss-load-config: 4.0.1(postcss@8.4.21)
       rollup: 3.15.0
-      vite: 4.0.4
+      vite: 4.0.5
       vue: 3.3.2
       vue-router: 4.1.6(vue@3.3.2)
     transitivePeerDependencies:
@@ -4117,8 +4117,8 @@ packages:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
 
-  /vite@4.0.4:
-    resolution: {integrity: sha512-xevPU7M8FU0i/80DMR+YhgrzR5KS2ORy1B4xcX/cXLsvnUWvfHuqMmVU6N0YiJ4JWGRJJsLCgjEzKjG9/GKoSw==}
+  /vite@4.0.5:
+    resolution: {integrity: sha512-7m87RC+caiAxG+8j3jObveRLqaWA/neAdCat6JAZwMkSWqFHOvg8MYe5fAQxVBRAuKAQ1S6XDh3CBQuLNbY33w==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
