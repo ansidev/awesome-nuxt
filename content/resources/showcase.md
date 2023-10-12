@@ -83,3 +83,4 @@
 - [Never Have I Ever Online - Questions & Game](https://neverhaveiever.online/) - Never Have I Ever Online Questions & Game, play with friends online or offline.
 - [viblo.asia](https://viblo.asia) - Free service for technical knowledge sharing
 - [Project Powder](https://theprojectpowder.com/) - A snow resort discovery PWA built using NuxtJS and Buefy.
+- [Pinx](https://themeforest.net/item/pinx-vuejs-admin-template/47799543?ref=DverseStudio&utm_source=awesomevue) - Pinx is an admin template crafted with Vue 3 + TypeScript, developer-friendly and designed with Naive UI and Tailwind CSS. Nuxt compatible! Nuxt Content used on [docs](https://pinx-docs.vercel.app/)
