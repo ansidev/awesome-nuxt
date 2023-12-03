@@ -11,7 +11,10 @@
       "matchPackagePatterns": [
         "*"
       ],
-      "rangeStrategy": "bump"
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ]
     },
     {
       "groupName": "vuepress",
