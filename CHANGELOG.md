@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v2.0.7](https://github.com/ansidev/awesome-nuxt/compare/v2.0.6...v2.0.7) (2023-12-03)
+
+### Bug Fixes
+
+- update renovate config
+
+- **github-workflow:** update Node version
+
+- **github-workflow:** adjust trigger deploy condition
+
+### Features
+
+- **config:** update renovate.json
+
+- **github-workflow:** automate deploying site to Netlify
+
+Full Changelog: [v2.0.6...v2.0.7](https://github.com/ansidev/awesome-nuxt/compare/v2.0.6...v2.0.7)
+
 ## [v2.0.6](https://github.com/ansidev/awesome-nuxt/compare/v2.0.5...v2.0.6) (2023-06-07)
 
 ### Bug Fixes
