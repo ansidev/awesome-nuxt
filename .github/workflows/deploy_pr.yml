@@ -1,0 +1,44 @@
+name: deploy_pr
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    branches:
+      - develop
+
+env:
+  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+  NETLIFY_SITE_NAME: ${{ vars.NETLIFY_SITE_NAME }}
+  DEPLOY_DIR: ${{ vars.DEPLOY_DIR }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: pr-${{ github.event.number }}
+      url: ${{ steps.deploy.outputs.netlify-deploy-url }}
+    steps:
+      - name: Build site
+        id: build
+        uses: ghacts/static-site@main
+        env:
+          DOCSEARCH_APP_ID: ${{ secrets.DOCSEARCH_APP_ID }}
+          DOCSEARCH_API_KEY: ${{ secrets.DOCSEARCH_API_KEY }}
+          DOCSEARCH_INDEX_NAME: ${{ secrets.DOCSEARCH_INDEX_NAME }}
+          GA_ID: ${{ secrets.GA_ID }}
+        with:
+          node-version: 20
+          skip-test: true
+          output-dir: ${{ env.DEPLOY_DIR }}
+
+      - name: Deploy to Netlify
+        if: success()
+        id: deploy
+        uses: ghacts/manual-deploy-to-netlify@main
+        with:
+          auth-token: ${{ env.NETLIFY_AUTH_TOKEN }}
+          site: ${{ env.NETLIFY_SITE_NAME }}
+          dir: ${{ env.DEPLOY_DIR }}
+          alias: pr-${{ github.event.number }}

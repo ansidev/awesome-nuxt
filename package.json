@@ -1,6 +1,6 @@
 {
   "name": "awesome-nuxt",
-  "version": "2.0.6",
+  "version": "2.1.0",
   "description": "🎉 A curated list of awesome things related to Nuxt.js",
   "private": true,
   "repository": {
@@ -36,17 +36,17 @@
     "@vuepress/plugin-git": "^2.0.0-beta.60",
     "@vuepress/plugin-google-analytics": "^2.0.0-beta.60",
     "@vuepress/plugin-pwa": "^2.0.0-beta.60",
-    "markdownlint-cli2": "^0.7.1",
+    "markdownlint-cli2": "^0.11.0",
     "vue": "^3.3.2",
     "vuepress": "^2.0.0-beta.60"
   },
   "resolutions": {
     "@vuepress/client": "2.0.0-beta.60",
-    "@vuepress/plugin-docsearch": "2.0.0-beta.60",
-    "@vuepress/plugin-git": "2.0.0-beta.60",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.0",
+    "@vuepress/plugin-git": "2.0.0-rc.0",
     "@vuepress/plugin-google-analytics": "2.0.0-beta.60",
     "@vuepress/plugin-pwa": "2.0.0-beta.60",
     "vuepress": "2.0.0-beta.60"
   },
-  "packageManager": "pnpm@8.6.1"
+  "packageManager": "pnpm@8.11.0"
 }
