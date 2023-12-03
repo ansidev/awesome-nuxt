@@ -28,7 +28,7 @@ jobs:
           DOCSEARCH_INDEX_NAME: ${{ secrets.DOCSEARCH_INDEX_NAME }}
           GA_ID: ${{ secrets.GA_ID }}
         with:
-          node-version: 18
+          node-version: 20
           skip-test: true
           output-dir: ${{ env.DEPLOY_DIR }}
 
