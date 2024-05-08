@@ -8,6 +8,7 @@
 
 | Name | Description | Repository |
 |---|---|---|
+| [Gradus]([https://cssgradienttext.com/](https://trygradus.web.app/)) | An open-source tool that enables you to create code labs using both markdown and rich markdown components. | [github]([https://github.com/KareemDa/gradient-text](https://github.com/oss-labs/gradus)) |
 | [CSS Gradient Text](https://cssgradienttext.com/) | CSS gradient text - Free online gradient text generator | [github](https://github.com/KareemDa/gradient-text) |
 | [V-Store](https://vue-ecom.vercel.app/) | Beautiful Open source StoreFront template built with Nuxt3. | [github](https://github.com/rash0/Vue-Ecom) |
 
