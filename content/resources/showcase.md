@@ -83,3 +83,4 @@
 - [Never Have I Ever Online - Questions & Game](https://neverhaveiever.online/) - Never Have I Ever Online Questions & Game, play with friends online or offline.
 - [viblo.asia](https://viblo.asia) - Free service for technical knowledge sharing
 - [Project Powder](https://theprojectpowder.com/) - A snow resort discovery PWA built using NuxtJS and Buefy.
+- [Free Code Tools](https://freecodetools.org/) - Collection of free SEO and code tools.

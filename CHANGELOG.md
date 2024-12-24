@@ -4,11 +4,27 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v2.1.1](https://github.com/ansidev/awesome-nuxt/compare/v2.1.0...v2.1.1) (2024-12-24)
+
+### Dependencies
+
+| Package                             | Version                             |
+| ----------------------------------- | ----------------------------------- |
+| `markdownlint-cli2`                 | `^2.0.0-beta.60` `->` `^2.0.0-rc.2` |
+| `@vuepress/plugin-docsearch`        | `^2.0.0-beta.60` `->` `^2.0.0-rc.0` |
+| `@vuepress/plugin-git`              | `^2.0.0-beta.60` `->` `^2.0.0-rc.0` |
+| `@vuepress/plugin-google-analytics` | `^2.0.0-beta.60` `->` `^2.0.0-rc.0` |
+| `@vuepress/plugin-pwa`              | `^2.0.0-beta.60` `->` `^2.0.0-rc.0` |
+| `markdownlint-cli2`                 | `^0.11.0` `->` `^0.16.0`            |
+| `vue`                               | `^3.3.2` `->` `^3.5.13`             |
+| `vuepress`                          | `^2.0.0-beta.60` `->` `^2.0.0-rc.0` |
+| `pnpm`                              | `^8.11.0` `->` `^9.15.1`            |
+
+Full Changelog: [v2.1.0...v2.1.1](https://github.com/ansidev/awesome-nuxt/compare/v2.1.0...v2.1.1)
+
 ## [v2.1.0](https://github.com/ansidev/awesome-nuxt/compare/v2.0.6...v2.1.0) (2023-12-03)
 
 ### Bug Fixes
-
-- update renovate config
 
 - **github-workflow:** update Node version
 
@@ -16,7 +32,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ### Features
 
-- **config:** update renovate.json
+- **renovate:** update renovate config
 
 - **github-workflow:** automate deploying site to Netlify
 
