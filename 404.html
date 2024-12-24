@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme')
+      const systemDarkMode =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (userMode === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (userMode === 'dark' || systemDarkMode) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <link rel="icon" href="/logo.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#3eaf7c"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png"><link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c"><meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png"><meta name="msapplication-TileColor" content="#fff"><meta name="application-name" content="Awesome NuxtJS"><title>Awesome NuxtJS</title><meta name="description" content="🎉 A curated list of awesome things related to NuxtJS">
+    <link rel="preload" href="/assets/style-BX3cNoat.css" as="style"><link rel="stylesheet" href="/assets/style-BX3cNoat.css">
+    <link rel="modulepreload" href="/assets/app-D-OzhOP5.js"><link rel="modulepreload" href="/assets/404.html-C0F-AdPk.js">
+    
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container" vp-container data-v-a173db98><main class="page" data-v-a173db98><div class="theme-default-content" vp-content data-v-a173db98><h1 data-v-a173db98>404</h1><blockquote data-v-a173db98>Looks like we&#39;ve got some broken links.</blockquote><a class="route-link" href="/" data-v-a173db98>Take me home</a></div></main></div><!--[--><!----><!----><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-D-OzhOP5.js" defer></script>
+  </body>
+</html>
