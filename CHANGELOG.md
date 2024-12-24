@@ -4,13 +4,33 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v2.1.2](https://github.com/ansidev/awesome-nuxt/compare/v2.1.1...v2.1.2) (2024-12-25)
+
+### Bug Fixes
+
+- **Static site generator:** Upgrade VuePress and its plugins.
+
+### Dependencies
+
+| Package                             | Version                           |
+| ----------------------------------- | --------------------------------- |
+| `@vuepress/bundler-vite`            | `^2.0.0-rc.19`                    |
+| `@vuepress/client`                  | `^2.0.0-rc.19`                    |
+| `@vuepress/plugin-docsearch`        | `^2.0.0-rc.0` `->` `^2.0.0-rc.67` |
+| `@vuepress/plugin-git`              | `^2.0.0-rc.0` `->` `^2.0.0-rc.66` |
+| `@vuepress/plugin-google-analytics` | `^2.0.0-rc.0` `->` `^2.0.0-rc.66` |
+| `@vuepress/plugin-pwa`              | `^2.0.0-rc.0` `->` `^2.0.0-rc.66` |
+| `sass-embedded`                     | `^1.83.0`                         |
+| `vuepress`                          | `^2.0.0-rc.0` `->` `^2.0.0-rc.19` |
+
+Full Changelog: [v2.1.1...v2.1.2](https://github.com/ansidev/awesome-nuxt/compare/v2.1.1...v2.1.2)
+
 ## [v2.1.1](https://github.com/ansidev/awesome-nuxt/compare/v2.1.0...v2.1.1) (2024-12-24)
 
 ### Dependencies
 
 | Package                             | Version                             |
 | ----------------------------------- | ----------------------------------- |
-| `markdownlint-cli2`                 | `^2.0.0-beta.60` `->` `^2.0.0-rc.2` |
 | `@vuepress/plugin-docsearch`        | `^2.0.0-beta.60` `->` `^2.0.0-rc.0` |
 | `@vuepress/plugin-git`              | `^2.0.0-beta.60` `->` `^2.0.0-rc.0` |
 | `@vuepress/plugin-google-analytics` | `^2.0.0-beta.60` `->` `^2.0.0-rc.0` |
