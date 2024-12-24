@@ -1,11 +1,13 @@
-import { defaultTheme } from 'vuepress'
+import { viteBundler } from '@vuepress/bundler-vite'
+import { defaultTheme } from '@vuepress/theme-default'
+import { defineUserConfig } from 'vuepress'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { pwaPlugin } from '@vuepress/plugin-pwa'
 
 const isProd = process.env.NODE_ENV === "production"
 
-module.exports = {
+export default defineUserConfig({
   title: "Awesome NuxtJS",
   description: "🎉 A curated list of awesome things related to NuxtJS",
   head: [
@@ -22,7 +24,7 @@ module.exports = {
       content: "#3eaf7c"
     }],
     ["meta", {
-      name: "apple-mobile-web-app-capable",
+      name: "mobile-web-app-capable",
       content: "yes"
     }],
     [
@@ -101,8 +103,8 @@ module.exports = {
     googleAnalyticsPlugin({
       id: process.env.GA_ID!
     }),
-    pwaPlugin({
-      skipWaiting: true
-    }),
+    pwaPlugin(),
   ],
-};
+  bundler: viteBundler(),
+  shouldPrefetch: false,
+})
