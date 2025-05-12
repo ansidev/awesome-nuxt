@@ -1,0 +1,43 @@
+name: create_release_pr
+
+on:
+  push:
+    branches:
+      - "release/**"
+      - "hotfix/**"
+
+jobs:
+  create_release_pr:
+    name: Create release pull request
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    # only create draft pull requests on
+    # pushing to branches 'release/' or 'hotfix/'
+    if: |
+      startsWith(github.ref_name, 'release/') ||
+      startsWith(github.ref_name, 'hotfix/')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          token: ${{ secrets.GH_TOKEN }}
+          # needed by "gh pr create"
+          fetch-depth: 0
+
+      - name: Set release type as release
+        if: startsWith(github.ref_name, 'release/')
+        run: echo "RELEASE_TYPE=release" >> "$GITHUB_ENV"
+
+      - name: Set release type as hotfix
+        if: startsWith(github.ref_name, 'hotfix/')
+        run: echo "RELEASE_TYPE=hotfix" >> "$GITHUB_ENV"
+
+      - name: Create release pull request
+        uses: ghacts/gitflow/create-release-pr@main
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          release-type: ${{ env.RELEASE_TYPE }}
+          release-branch-prefix: '${{ env.RELEASE_TYPE }}/'

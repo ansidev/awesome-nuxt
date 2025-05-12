@@ -1,0 +1,54 @@
+name: publish_release
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+
+env:
+  VERSION_TAG_PREFIX: "v"
+
+jobs:
+  release:
+    name: Publish release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    # only merge pull requests that begin with 'release/' or 'hotfix/'
+    if: github.event.pull_request.merged == true &&
+      (startsWith(github.head_ref, 'release/') || startsWith(github.head_ref, 'hotfix/'))
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GH_TOKEN }}
+          # needed by "gh pr create"
+          fetch-depth: 0
+
+      - name: Set release type as release
+        if: startsWith(github.head_ref, 'release/')
+        run: echo "RELEASE_TYPE=release" >> "$GITHUB_ENV"
+
+      - name: Set release type as hotfix
+        if: startsWith(github.head_ref, 'hotfix/')
+        run: echo "RELEASE_TYPE=hotfix" >> "$GITHUB_ENV"
+
+      - name: Extract version from release branch
+        env:
+          BRANCH_NAME: ${{ github.head_ref }}
+          BRANCH_PREFIX: '${{ env.RELEASE_TYPE }}/'
+        run: |
+          RELEASE_VERSION=${BRANCH_NAME#${BRANCH_PREFIX}}
+          echo "RELEASE_VERSION=${RELEASE_VERSION}" >> $GITHUB_ENV
+
+      - name: Publish release
+        uses: ghacts/gitflow/publish-release@main
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          release-type: ${{ env.RELEASE_TYPE }}
+          release-branch-prefix: '${{ env.RELEASE_TYPE }}/'
+          notes-file: '.changes/${{ env.VERSION_TAG_PREFIX }}${{ env.RELEASE_VERSION }}.md'
