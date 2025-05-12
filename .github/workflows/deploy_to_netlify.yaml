@@ -1,0 +1,147 @@
+name: deploy_to_netlify
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+    types:
+      - opened
+      - synchronize
+      - closed
+
+env:
+  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+  NETLIFY_SITE_NAME: ${{ vars.NETLIFY_SITE_NAME }}
+  DEPLOY_DIR: ${{ vars.DEPLOY_DIR }}
+
+jobs:
+  set_deploy_environment:
+    if: github.event.action != 'closed' || github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set deploy environment as pr-${{ github.event.number }}
+        if: github.base_ref == 'develop' && contains(fromJSON('["opened", "synchronize"]'), github.event.action)
+        env:
+          DEPLOY_ENVIRONMENT: pr-${{ github.event.number }}
+        run: |
+          {
+            echo "DEPLOY_ENVIRONMENT=$DEPLOY_ENVIRONMENT"
+            echo "NETLIFY_DEPLOY_PREFIX=${DEPLOY_ENVIRONMENT}--"
+            echo "NETLIFY_DEPLOY_ALIAS=$DEPLOY_ENVIRONMENT"
+          } >> "$GITHUB_ENV"
+
+      - name: Set deploy environment as preview
+        if: github.base_ref == 'develop' && github.event.action == 'closed' && github.event.pull_request.merged == true
+        env:
+          DEPLOY_ENVIRONMENT: preview
+          PR_DEPLOY_ENVIRONMENT: pr-${{ github.event.number }}
+        run: |
+          {
+            echo "DEPLOY_ENVIRONMENT=$DEPLOY_ENVIRONMENT"
+            echo "PR_DEPLOY_ENVIRONMENT=$PR_DEPLOY_ENVIRONMENT"
+            echo "NETLIFY_DEPLOY_PREFIX=${DEPLOY_ENVIRONMENT}--"
+            echo "NETLIFY_DEPLOY_ALIAS=$DEPLOY_ENVIRONMENT"
+          } >> "$GITHUB_ENV"
+
+      - name: Set deploy environment as staging
+        if: github.base_ref == 'main' && contains(fromJSON('["opened", "synchronize"]'), github.event.action)
+        env:
+          DEPLOY_ENVIRONMENT: staging
+        run: |
+          {
+            echo "DEPLOY_ENVIRONMENT=$DEPLOY_ENVIRONMENT"
+            echo "NETLIFY_DEPLOY_PREFIX=${DEPLOY_ENVIRONMENT}--"
+            echo "NETLIFY_DEPLOY_ALIAS=$DEPLOY_ENVIRONMENT"
+          } >> "$GITHUB_ENV"
+
+      - name: Set deploy environment as production
+        if: github.base_ref == 'main' && github.event.action == 'closed' && github.event.pull_request.merged == true
+        run: echo "DEPLOY_ENVIRONMENT=production" >> "$GITHUB_ENV"
+
+      - name: Set deploy environment output
+        id: deploy_environment
+        run: |
+          {
+            echo "github_environment=$DEPLOY_ENVIRONMENT"
+            echo "github_pr_environment=$PR_DEPLOY_ENVIRONMENT"
+            echo "netlify_deploy_prefix=$NETLIFY_DEPLOY_PREFIX"
+            echo "netlify_deploy_alias=$NETLIFY_DEPLOY_ALIAS"
+          } >> "$GITHUB_OUTPUT"
+
+    outputs:
+      github_environment: ${{ steps.deploy_environment.outputs.github_environment }}
+      github_pr_environment: ${{ steps.deploy_environment.outputs.github_pr_environment }}
+      netlify_deploy_prefix: ${{ steps.deploy_environment.outputs.netlify_deploy_prefix }}
+      netlify_deploy_alias: ${{ steps.deploy_environment.outputs.netlify_deploy_alias }}
+
+  deploy:
+    if: github.event.action != 'closed' || github.event.pull_request.merged == true
+    needs: set_deploy_environment
+    environment:
+      name: ${{ needs.set_deploy_environment.outputs.github_environment }}
+      url: ${{ steps.deploy.outputs.netlify-deploy-url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set app environment variables
+        env:
+          NETLIFY_DEPLOY_PREFIX: ${{ needs.set_deploy_environment.outputs.netlify_deploy_prefix }}
+          NETLIFY_DEPLOY_ALIAS: ${{ needs.set_deploy_environment.outputs.netlify_deploy_alias }}
+        run: |
+          {
+            echo "NETLIFY_DEPLOY_ALIAS=${NETLIFY_DEPLOY_ALIAS}"
+          } >> "$GITHUB_ENV"
+
+      - name: Build
+        uses: ghacts/static-site@main
+        env:
+          DOCSEARCH_APP_ID: ${{ secrets.DOCSEARCH_APP_ID }}
+          DOCSEARCH_API_KEY: ${{ secrets.DOCSEARCH_API_KEY }}
+          DOCSEARCH_INDEX_NAME: ${{ secrets.DOCSEARCH_INDEX_NAME }}
+          GA_ID: ${{ secrets.GA_ID }}
+        with:
+          skip-test: true
+          output-dir: ${{ env.DEPLOY_DIR }}
+
+      - name: Deploy to Netlify
+        id: deploy
+        uses: ghacts/manual-deploy-to-netlify@main
+        env:
+          PROD: ${{ needs.set_deploy_environment.outputs.github_environment == 'production' }}
+        with:
+          auth-token: ${{ env.NETLIFY_AUTH_TOKEN }}
+          site: ${{ env.NETLIFY_SITE_ID }}
+          dir: ${{ env.DEPLOY_DIR }}
+          alias: ${{ env.NETLIFY_DEPLOY_ALIAS }}
+          prod: ${{ env.PROD }}
+
+    outputs:
+      success: ${{ steps.deploy.outputs.success }}
+
+  delete_resources:
+    needs:
+      - set_deploy_environment
+      - deploy
+    if: needs.deploy.outputs.success == 'true' && github.base_ref == 'develop' && github.event.action == 'closed' && github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete the PR branch after merged into develop
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIT_REF_PATH: /repos/${{ github.repository }}/git/refs/heads/${{ github.head_ref }}
+        run: |
+          STATUS_CODE=$(gh api -i -H "Accept: application/vnd.github+json" "${GIT_REF_PATH}" | head -1)
+          ([[ "$STATUS_CODE" == "HTTP/2.0 200 OK" ]] && \
+            gh api --method DELETE -H "Accept: application/vnd.github+json" "${GIT_REF_PATH}") || \
+            echo "Branch does not exist, deleting was ignored."
+
+      - name: Delete the environment ${{ needs.set_deploy_environment.outputs.github_pr_environment }}
+        if: needs.set_deploy_environment.outputs.github_pr_environment != ''
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          gh api \
+            --method DELETE \
+            -H "Accept: application/vnd.github+json" \
+            /repos/${{ github.repository }}/environments/${{ needs.set_deploy_environment.outputs.github_pr_environment }}
