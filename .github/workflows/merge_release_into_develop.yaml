@@ -1,0 +1,35 @@
+name: merge_release_into_develop
+
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - develop
+
+jobs:
+  merge_release_into_develop:
+    name: Merge release into develop
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    # only merge pull requests that begin with 'release/' or 'hotfix/'
+    if: |
+      startsWith(github.head_ref, 'release/') ||
+      startsWith(github.head_ref, 'hotfix/')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GH_TOKEN }}
+          # needed by "gh pr create"
+          fetch-depth: 0
+
+      - name: Merge ${{ github.head_ref }} into develop
+        uses: ghacts/gitflow/merge-release-into-develop@main
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          release-branch: ${{ github.head_ref }}
+          develop-branch: develop
