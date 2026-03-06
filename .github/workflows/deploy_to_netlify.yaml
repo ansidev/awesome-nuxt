@@ -123,7 +123,7 @@ jobs:
     needs:
       - set_deploy_environment
       - deploy
-    if: needs.deploy.outputs.success == 'true' && github.base_ref == 'develop' && github.event.action == 'closed' && github.event.pull_request.merged == true
+    if: needs.deploy.outputs.success == 'true' && github.base_ref == 'develop'
     runs-on: ubuntu-latest
     steps:
       - name: Delete the PR branch after merged into develop
@@ -141,7 +141,18 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          gh api \
-            --method DELETE \
+          response=$(gh api \
             -H "Accept: application/vnd.github+json" \
-            /repos/${{ github.repository }}/environments/${{ needs.set_deploy_environment.outputs.github_pr_environment }}
+            /repos/${{ github.repository }}/environments/${{ needs.set_deploy_environment.outputs.github_pr_environment }} || true)
+
+          name=$(echo "$response" | jq -r '.name // "unknown"')
+
+          if [[ "$name" == "${{ needs.set_deploy_environment.outputs.github_pr_environment }}" ]]; then
+            echo "Deleting environment ${{ needs.set_deploy_environment.outputs.github_pr_environment }}..."
+            gh api \
+              --method DELETE \
+              -H "Accept: application/vnd.github+json" \
+              /repos/${{ github.repository }}/environments/${{ needs.set_deploy_environment.outputs.github_pr_environment }}
+          else
+            echo "Environment ${{ needs.set_deploy_environment.outputs.github_pr_environment }} does not exist. Skipping deletion."
+          fi
