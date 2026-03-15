@@ -71,9 +71,9 @@ Each worktree follows the same steps:
 - There is no limit on the number of files to fix — the `content/` directory has only 16 markdown files, so scope is bounded
 - To diagnose *why* rules changed, consult the [markdownlint-cli2 changelog](https://github.com/DavidAnson/markdownlint-cli2/blob/main/CHANGELOG.md) and the [markdownlint changelog](https://github.com/DavidAnson/markdownlint/blob/main/CHANGELOG.md). New violations may require either fixing content files or updating rules in `.markdownlint-cli2.cjs`
 
-### Build verification for VuePress group
+### Build verification
 
-In the `update-vuepress` worktree, also run `pnpm build` after `pnpm lint` to catch any VuePress API breakage that lint cannot detect. If `pnpm build` fails, investigate the VuePress changelog before proceeding.
+Run `pnpm build` in every worktree after `pnpm lint` passes. This catches runtime or bundler breakage that lint cannot detect. If `pnpm build` fails in the `update-vuepress` worktree, investigate the VuePress changelog before proceeding.
 
 ## GitHub Actions
 
@@ -81,12 +81,14 @@ No workflow file changes are required. All workflows already use `actions/checko
 
 ## Verification
 
+All worktrees run both `pnpm lint` and `pnpm build` locally before committing.
+
 | Worktree | Commands |
 |---|---|
-| `update-vue` | `pnpm lint` |
-| `update-sass` | `pnpm lint` |
+| `update-vue` | `pnpm lint` && `pnpm build` |
+| `update-sass` | `pnpm lint` && `pnpm build` |
 | `update-vuepress` | `pnpm lint` && `pnpm build` |
-| `update-markdownlint` | `pnpm lint` |
+| `update-markdownlint` | `pnpm lint` && `pnpm build` |
 
 Current baseline: `pnpm lint` passes with 0 errors.
 
