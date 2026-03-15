@@ -9,25 +9,25 @@ importers:
   .:
     devDependencies:
       '@vuepress/bundler-vite':
-        specifier: ^2.0.0-rc.19
+        specifier: ^2.0.0-rc.26
         version: 2.0.0-rc.26(@types/node@25.3.5)(sass-embedded@1.98.0)(sass@1.98.0)(terser@5.46.0)(yaml@2.6.1)
       '@vuepress/client':
-        specifier: ^2.0.0-rc.19
+        specifier: ^2.0.0-rc.26
         version: 2.0.0-rc.26
       '@vuepress/plugin-docsearch':
-        specifier: ^2.0.0-rc.67
+        specifier: ^2.0.0-rc.125
         version: 2.0.0-rc.125(@vuepress/bundler-vite@2.0.0-rc.26(@types/node@25.3.5)(sass-embedded@1.98.0)(sass@1.98.0)(terser@5.46.0)(yaml@2.6.1))(vuepress@2.0.0-rc.26(@vuepress/bundler-vite@2.0.0-rc.26(@types/node@25.3.5)(sass-embedded@1.98.0)(sass@1.98.0)(terser@5.46.0)(yaml@2.6.1))(vue@3.5.30))
       '@vuepress/plugin-git':
-        specifier: ^2.0.0-rc.66
+        specifier: ^2.0.0-rc.125
         version: 2.0.0-rc.125(@vuepress/bundler-vite@2.0.0-rc.26(@types/node@25.3.5)(sass-embedded@1.98.0)(sass@1.98.0)(terser@5.46.0)(yaml@2.6.1))(vuepress@2.0.0-rc.26(@vuepress/bundler-vite@2.0.0-rc.26(@types/node@25.3.5)(sass-embedded@1.98.0)(sass@1.98.0)(terser@5.46.0)(yaml@2.6.1))(vue@3.5.30))
       '@vuepress/plugin-google-analytics':
-        specifier: ^2.0.0-rc.66
+        specifier: ^2.0.0-rc.125
         version: 2.0.0-rc.125(vuepress@2.0.0-rc.26(@vuepress/bundler-vite@2.0.0-rc.26(@types/node@25.3.5)(sass-embedded@1.98.0)(sass@1.98.0)(terser@5.46.0)(yaml@2.6.1))(vue@3.5.30))
       '@vuepress/plugin-pwa':
-        specifier: ^2.0.0-rc.66
+        specifier: ^2.0.0-rc.125
         version: 2.0.0-rc.125(@vuepress/bundler-vite@2.0.0-rc.26(@types/node@25.3.5)(sass-embedded@1.98.0)(sass@1.98.0)(terser@5.46.0)(yaml@2.6.1))(vuepress@2.0.0-rc.26(@vuepress/bundler-vite@2.0.0-rc.26(@types/node@25.3.5)(sass-embedded@1.98.0)(sass@1.98.0)(terser@5.46.0)(yaml@2.6.1))(vue@3.5.30))
       '@vuepress/theme-default':
-        specifier: ^2.0.0-rc.66
+        specifier: ^2.0.0-rc.125
         version: 2.0.0-rc.125(@vuepress/bundler-vite@2.0.0-rc.26(@types/node@25.3.5)(sass-embedded@1.98.0)(sass@1.98.0)(terser@5.46.0)(yaml@2.6.1))(markdown-it@14.1.1)(sass-embedded@1.98.0)(sass@1.98.0)(vuepress@2.0.0-rc.26(@vuepress/bundler-vite@2.0.0-rc.26(@types/node@25.3.5)(sass-embedded@1.98.0)(sass@1.98.0)(terser@5.46.0)(yaml@2.6.1))(vue@3.5.30))
       markdownlint-cli2:
         specifier: ^0.21.0
@@ -39,7 +39,7 @@ importers:
         specifier: ^3.5.30
         version: 3.5.30
       vuepress:
-        specifier: ^2.0.0-rc.19
+        specifier: ^2.0.0-rc.26
         version: 2.0.0-rc.26(@vuepress/bundler-vite@2.0.0-rc.26(@types/node@25.3.5)(sass-embedded@1.98.0)(sass@1.98.0)(terser@5.46.0)(yaml@2.6.1))(vue@3.5.30)
 
 packages:
@@ -1214,9 +1214,6 @@ packages:
     resolution: {integrity: sha512-v+R34icapydRwbZRD0sXwtHqrQJv38JuMB4JxbOxd8NEpGLny7cncMp53W9UH/zo4j8eDHjQ1dEJXwzFQknjtQ==}
     peerDependencies:
       vue: 3.5.30
-
-  '@vue/shared@3.5.29':
-    resolution: {integrity: sha512-w7SR0A5zyRByL9XUkCfdLs7t9XOHUyJ67qPGQjOou3p6GvBeBW+AVjUUmlxtZ4PIYaRvE+1LmK44O4uajlZwcg==}
 
   '@vue/shared@3.5.30':
     resolution: {integrity: sha512-YXgQ7JjaO18NeK2K9VTbDHaFy62WrObMa6XERNfNOkAhD1F1oDSf3ZJ7K6GqabZ0BvSDHajp8qfS5Sa2I9n8uQ==}
@@ -4269,7 +4266,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 24.12.0
+      '@types/node': 25.3.5
 
   '@types/trusted-types@2.0.7': {}
 
@@ -4354,8 +4351,6 @@ snapshots:
       '@vue/shared': 3.5.30
       vue: 3.5.30
 
-  '@vue/shared@3.5.29': {}
-
   '@vue/shared@3.5.30': {}
 
   '@vuepress/bundler-vite@2.0.0-rc.26(@types/node@25.3.5)(sass-embedded@1.98.0)(sass@1.98.0)(terser@5.46.0)(yaml@2.6.1)':
@@ -4437,7 +4432,7 @@ snapshots:
 
   '@vuepress/helper@2.0.0-rc.125(@vuepress/bundler-vite@2.0.0-rc.26(@types/node@25.3.5)(sass-embedded@1.98.0)(sass@1.98.0)(terser@5.46.0)(yaml@2.6.1))(vuepress@2.0.0-rc.26(@vuepress/bundler-vite@2.0.0-rc.26(@types/node@25.3.5)(sass-embedded@1.98.0)(sass@1.98.0)(terser@5.46.0)(yaml@2.6.1))(vue@3.5.30))':
     dependencies:
-      '@vue/shared': 3.5.29
+      '@vue/shared': 3.5.30
       '@vueuse/core': 14.2.1(vue@3.5.30)
       cheerio: 1.2.0
       fflate: 0.8.2
