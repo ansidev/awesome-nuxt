@@ -101,6 +101,7 @@ jobs:
           DOCSEARCH_INDEX_NAME: ${{ secrets.DOCSEARCH_INDEX_NAME }}
           GA_ID: ${{ secrets.GA_ID }}
         with:
+          package-manager-version: ''
           skip-test: true
           output-dir: ${{ env.DEPLOY_DIR }}
 
