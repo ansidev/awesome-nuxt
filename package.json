@@ -22,7 +22,8 @@
     "vuepress"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=26",
+    "pnpm": ">=11"
   },
   "scripts": {
     "dev": "vuepress dev content",
@@ -42,6 +43,5 @@
     "sass-embedded": "^1.98.0",
     "vue": "^3.5.30",
     "vuepress": "^2.0.0-rc.26"
-  },
-  "packageManager": "pnpm@10.33.0"
+  }
 }
