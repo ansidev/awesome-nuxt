@@ -7,14 +7,14 @@
 ![Nuxt v3][nuxt-v3-label]
 
 | Name | Description | Repository |
-|---|---|---|
+| --- | --- | --- |
 | [CSS Gradient Text](https://cssgradienttext.com/) | CSS gradient text - Free online gradient text generator | [github](https://github.com/KareemDa/gradient-text) |
 | [V-Store](https://vue-ecom.vercel.app/) | Beautiful Open source StoreFront template built with Nuxt3. | [github](https://github.com/rash0/Vue-Ecom) |
 
 ![Nuxt v2][nuxt-v2-label]
 
 | Name | Description | Repository |
-|---|---|---|
+| --- | --- | --- |
 | [KodaDot](https://kodadot.xyz) | NFT Marketplace on Polkadot funded as public good, written in Vue.js | [github](https://github.com/kodadot/nft-gallery) |
 | [Sahem](https://ramadanathon.netlify.app/) | [Arabic] A demo charity solution which helps poor people obtain expensive tools and equipments. Presented in the Ramadanathon event of 2021. | [gitlab](https://gitlab.com/IbrahimBeladi/ramadanathon) |
 | [We Are Apartments](https://weareapartments.org/) | We Are Apartments - helping people live in a home that's right for them. | [github](https://github.com/acidjazz/waa) |
@@ -24,10 +24,10 @@
 | n2ex | Web app of v2ex built with Nuxt. | [github](https://github.com/OrangeXC/n2ex) |
 | ammobin.ca | Meta search site for ammo prices in Canada. | [github](https://github.com/ammobinDOTca/ammobin-client) |
 | Hare | Application boilerplate based on Vue.js 2.x, Koa 2.x, Element-UI and Nuxt.js. 🐇 | [github](https://github.com/clarkdo/hare) |
-| [moso.io](https://moso.io) | Personal SSR and PWA portfolio by [@moso](https://github.com/moso) built with Nuxt.js, [Strapi](https://strapi.io), and [Brutalism](https://brutalist-web.design).  | [github](https://github.com/moso/moso-vite) |
+| [moso.io](https://moso.io) | Personal SSR and PWA portfolio by [@moso](https://github.com/moso) built with Nuxt.js, [Strapi](https://strapi.io), and [Brutalism](https://brutalist-web.design). | [github](https://github.com/moso/moso-vite) |
 | VueBlog | Blog system [@wmui](https://github.com/wmui). | [github](https://github.com/wmui/vueblog) |
 | DBAdventure | Simple PHP and VueJs game where players embody a Dragon Ball character. | [github](https://github.com/DBAdventure/web) |
-| NuxtDoc by Storyblok | The setup to build beautiful documentation with Nuxt and Storyblok deployed on Netlify for everyone - for Free.  | [github](https://github.com/storyblok/nuxtdoc) |
+| NuxtDoc by Storyblok | The setup to build beautiful documentation with Nuxt and Storyblok deployed on Netlify for everyone - for Free. | [github](https://github.com/storyblok/nuxtdoc) |
 | nuxt-elm | Full-stack open source project based on vue2 + nuxt.[Performance demonstration](https://elm.caibowen.net/). | [github](https://github.com/EasyTuan/nuxt-elm/) |
 | vue-org-chart | Manage and publish your interactive organization chart (orgchart), free and no webserver required. | [github](https://github.com/Hoogkamer/vue-org-chart) |
 | Opa | Modern XMPP Chat Client for the Web. Built with Nuxt and Element UI. | [github](https://github.com/credija/opa) |
@@ -40,7 +40,7 @@
 ![Nuxt v1][nuxt-v1-label]
 
 | Name | Description | Repository |
-|---|---|---|
+| --- | --- | --- |
 | LibCrowds | Crowdsourcing platform built with Nuxt.js. | [github](https://github.com/LibCrowds/libcrowds) |
 | gustavo | Headless blogging platform built atop Nuxt & Gist. | [github](https://github.com/eggplanetio/gustavo) |
 | [2017 Rausch Family Christmas Card](https://awayken.github.io/2017-christmas-card/) | makes a digital Christmas card every year, and 2017's was built using Nuxt.js. | [github](https://github.com/awayken/2017-christmas-card) |
