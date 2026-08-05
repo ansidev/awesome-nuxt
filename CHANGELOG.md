@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v2.1.4](https://github.com/ansidev/awesome-nuxt/compare/v2.1.3...v2.1.4) (2026-08-06)
+
+### Bug Fixes
+
+- **deps:** regenerate pnpm lockfile
+
+Full Changelog: [v2.1.3...v2.1.4](https://github.com/ansidev/awesome-nuxt/compare/v2.1.3...v2.1.4)
+
 ## [v2.1.3](https://github.com/ansidev/awesome-nuxt/compare/v2.1.2...v2.1.3) (2026-08-05)
 
 ### Bug Fixes
