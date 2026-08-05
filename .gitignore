@@ -82,3 +82,6 @@ typings/
 
 # Visual Studio Code Settings
 .vscode/
+
+# OpenCode Settings
+.opencode/
