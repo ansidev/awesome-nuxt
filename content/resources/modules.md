@@ -172,3 +172,5 @@
 - [@nuxt-modules/cache](https://github.com/nuxt-modules/cache) - Browser and Server Cache module for Nuxt 3
 - [@nuxt-commerce/nuxt-tailvue](https://github.com/acidjazz/nuxt-tailvue) - Out of the box Tailwind CSS components
 - [nuxt-toastflow](https://github.com/adrianjanocko/toastflow/tree/main/packages/nuxt) - Headless toast (notification) engine for Nuxt (Vue 3 renderer, TS-first, CSS-first theming, highly customizable).
+
+- [nuxt-i18n-micro](https://github.com/s00d/nuxt-i18n-micro) - Lightweight, high-performance i18n module for Nuxt with strategy-based routing and minimal overhead.
