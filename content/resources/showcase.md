@@ -85,3 +85,4 @@
 - [viblo.asia](https://viblo.asia) - Free service for technical knowledge sharing
 - [Project Powder](https://theprojectpowder.com/) - A snow resort discovery PWA built using NuxtJS and Buefy.
 - [Free Code Tools](https://freecodetools.org/) - Collection of free SEO and code tools.
+- [1 Million Emojis](https://chriswijnia.com/lab/emoji) - A shared 1,000 × 1,000 emoji canvas where people paint and Jev paints beside them. Built with Nuxt 4 and Vue 3.5.
