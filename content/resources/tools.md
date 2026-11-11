@@ -7,3 +7,4 @@
 - [create-nuxt-netlify-cms-docs](https://github.com/RoboMx/create-nuxt-netlify-cms-docs) - Create Nuxt based docs with Netlify CMS as content manager.
 - [fume](https://fume.app) - Deploy to AWS supporting both server and static hosting, custom domains, integrations, and much more.
 - [flowbite](https://flowbite.com/docs/getting-started/nuxt-js/) - Integrate Nuxt.js with an open-source UI component library based on Tailwind CSS
+- [Markstream Vue](https://markstream.simonhe.me/frameworks/nuxt) - Streaming Markdown renderer for Nuxt with SSR support, Mermaid and KaTeX.
