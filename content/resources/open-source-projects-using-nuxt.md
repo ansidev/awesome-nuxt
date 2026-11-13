@@ -47,3 +47,4 @@
 | PWA Builder | Generate your Progressive Web App. | [github](https://github.com/pwa-builder/manifoldjs-site/tree/dev) |
 | 5se7en.com | 5se7en's Personal website. Built with Nuxt.js,express,vuex. | [github](https://github.com/se7en-1992/5se7en.com) |
 | [alainperrier.me](https://alainperrier.me) | Personal SSR and PWA portfolio by [@alainperrier](https://github.com/alainperrier/portfolio-2018/) built with Vue.js, Nuxt.js, Laravel and TailwindCSS. | [github](https://github.com/alainperrier/portfolio-2018/) |
+| [CitrusMail](https://faivelo.com/citrus-mail) | Open-source mail, calendar and contacts client for IMAP, POP3 and JMAP, built with Nuxt UI, with an Electron desktop app. | [github](https://github.com/citrusmail/citrusmail) |
