@@ -6,8 +6,6 @@ on:
       - main
       - develop
     types:
-      - opened
-      - synchronize
       - closed
 
 env:
