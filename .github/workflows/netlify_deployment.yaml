@@ -1,0 +1,155 @@
+name: Netlify PR deployment
+
+on:
+  pull_request_target:
+    branches: [main, develop]
+    types: [opened, reopened, synchronize]
+  workflow_run:
+    workflows: [Netlify review signal]
+    types: [completed]
+
+permissions: {}
+
+jobs:
+  gate:
+    if: >-
+      (github.event_name == 'pull_request_target' &&
+       github.event.pull_request.head.repo.id == github.event.pull_request.base.repo.id) ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.event == 'pull_request_review' && github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      pull-requests: read
+    outputs:
+      sha: ${{ steps.gate.outputs.sha }}
+      target: ${{ steps.gate.outputs.target }}
+      pr: ${{ steps.gate.outputs.pr }}
+      base: ${{ steps.gate.outputs.base }}
+      fork_review: ${{ steps.gate.outputs.fork_review }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+      - id: gate
+        name: Verify event, commit and review
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node .github/scripts/netlify-gate.cjs
+
+  build:
+    needs: gate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout selected commit
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ needs.gate.outputs.sha }}
+          persist-credentials: false
+      - name: Build in an isolated container without credentials or runner access
+        env:
+          DOCSEARCH_APP_ID: ${{ vars.DOCSEARCH_APP_ID }}
+          DOCSEARCH_API_KEY: ${{ vars.DOCSEARCH_API_KEY }}
+          DOCSEARCH_INDEX_NAME: ${{ vars.DOCSEARCH_INDEX_NAME }}
+          GA_ID: ${{ vars.GA_ID }}
+        run: |
+          docker run --rm --cap-drop=ALL --security-opt=no-new-privileges \
+            -v "$GITHUB_WORKSPACE:/work" -w /work \
+            -e DOCSEARCH_APP_ID -e DOCSEARCH_API_KEY -e DOCSEARCH_INDEX_NAME -e GA_ID \
+            node:26-bookworm sh -eu -c 'npm install --global pnpm@11; pnpm install --frozen-lockfile; pnpm lint; pnpm build'
+      - name: Validate and copy static files
+        env:
+          DEPLOY_DIR: ${{ vars.DEPLOY_DIR }}
+        run: |
+          python3 -c 'import os, pathlib, shutil, stat
+          root = pathlib.Path(os.environ["GITHUB_WORKSPACE"]).resolve()
+          configured = os.environ["DEPLOY_DIR"]
+          source = root / configured
+          if not configured or not source.is_dir() or source.is_symlink() or not source.resolve().is_relative_to(root):
+              raise SystemExit("::error::DEPLOY_DIR must name a directory inside the checkout.")
+          for path in source.rglob("*"):
+              if not (stat.S_ISREG(path.lstat().st_mode) or stat.S_ISDIR(path.lstat().st_mode)):
+                  raise SystemExit("::error::The build output must contain only regular files and directories, without symlinks.")
+          shutil.copytree(source, pathlib.Path(os.environ["RUNNER_TEMP"]) / "netlify-upload")'
+      - name: Upload static site
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: netlify-site
+          path: ${{ runner.temp }}/netlify-upload
+          if-no-files-found: error
+          include-hidden-files: true
+          retention-days: 1
+
+  deploy:
+    needs: [gate, build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    concurrency:
+      group: netlify-${{ needs.gate.outputs.target }}
+      cancel-in-progress: false
+    environment:
+      name: ${{ needs.gate.outputs.target }}
+      url: ${{ steps.deploy.outputs.url }}
+    steps:
+      - name: Checkout trusted gate
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: trusted
+          persist-credentials: false
+      - name: Download static site
+        uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
+        with:
+          name: netlify-site
+          path: ${{ runner.temp }}/netlify-site
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 26
+      - name: Install Netlify CLI
+        working-directory: ${{ runner.temp }}
+        run: |
+          npm install --global --ignore-scripts netlify-cli
+          mkdir -p "$RUNNER_TEMP/netlify-work/empty-functions"
+      - name: Recheck current head and approval
+        if: needs.gate.outputs.fork_review == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RECHECK: 'true'
+          PR_NUMBER: ${{ needs.gate.outputs.pr }}
+          EXPECTED_SHA: ${{ needs.gate.outputs.sha }}
+          EXPECTED_BASE: ${{ needs.gate.outputs.base }}
+        run: node trusted/.github/scripts/netlify-gate.cjs
+      - name: Recheck same-repository PR head
+        if: needs.gate.outputs.fork_review != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RECHECK_HEAD: 'true'
+          PR_NUMBER: ${{ needs.gate.outputs.pr }}
+          EXPECTED_SHA: ${{ needs.gate.outputs.sha }}
+          EXPECTED_BASE: ${{ needs.gate.outputs.base }}
+        run: node trusted/.github/scripts/netlify-gate.cjs
+      - name: Deploy static artifact
+        id: deploy
+        working-directory: ${{ runner.temp }}/netlify-work
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          TARGET: ${{ needs.gate.outputs.target }}
+          SITE_DIR: ${{ runner.temp }}/netlify-site
+        run: |
+          set -euo pipefail
+          if [[ -z "$NETLIFY_AUTH_TOKEN" || -z "$NETLIFY_SITE_ID" ]]; then
+            echo '::error::Configure NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID secrets for this deployment environment.'
+            exit 1
+          fi
+          args=(--no-build --skip-functions-cache --functions "$RUNNER_TEMP/netlify-work/empty-functions" --site "$NETLIFY_SITE_ID" --dir "$SITE_DIR" --json --message "GitHub Actions deployment")
+          args+=(--alias "$TARGET")
+          netlify deploy "${args[@]}" > "$RUNNER_TEMP/netlify-result.json"
+          url=$(node -e 'const r = require(process.argv[1]); console.log(r.deploy_url)' "$RUNNER_TEMP/netlify-result.json")
+          if [[ -z "$url" || "$url" == undefined ]]; then echo '::error::Netlify did not return a deployment URL.'; exit 1; fi
+          echo "url=$url" >> "$GITHUB_OUTPUT"

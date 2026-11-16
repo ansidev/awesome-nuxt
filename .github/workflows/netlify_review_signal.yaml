@@ -1,0 +1,13 @@
+name: Netlify review signal
+
+on:
+  pull_request_review:
+    types: [submitted]
+
+permissions: {}
+
+jobs:
+  signal:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Review received; the trusted deployment workflow verifies eligibility.'
