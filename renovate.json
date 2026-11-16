@@ -3,6 +3,7 @@
   "extends": [
     "config:base"
   ],
+  "minimumReleaseAge": "1 day",
   "baseBranches": [
     "develop"
   ],
