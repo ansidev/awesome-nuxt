@@ -159,3 +159,4 @@
 - [coachkyubi.fr](https://coachkyubi.fr/) - Personal website of French sport coach. Built with Nuxt.js, Tailwind and Sanity.
 - [Perguidex](https://perguidex.io) - Perguidex lets you keep track of everything in one place, so you can get it all done and enjoy more peace of mind by living your life to the fullest ✨
 - [Project Powder](https://theprojectpowder.com/) - A snow resort discovery PWA built using NuxtJS and Buefy.
+- [Together](https://together.game/) - Question game for deeper conversations: everyone answers in private, then all answers are revealed at once. Prerendered site and game client built with Nuxt 4, installable as a PWA.
